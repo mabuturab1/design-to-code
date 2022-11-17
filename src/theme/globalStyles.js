@@ -26,6 +26,8 @@ export default function GlobalStyles() {
         '#__next': {
           width: '100%',
           height: '100%',
+          backgroundColor: '#fff',
+          overflow: 'auto',
         },
         input: {
           '&[type=number]': {
@@ -49,6 +51,17 @@ export default function GlobalStyles() {
           padding: 0,
         },
         '.sectionGap': { marginBottom: '4rem' },
+        '.dispFlexColAlgnCen': {
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        },
+        '.sectionMaxWid': {
+          maxWidth: '35rem',
+        },
+        '.fullWidth': {
+          width: '100%',
+        },
       }}
     />
   );

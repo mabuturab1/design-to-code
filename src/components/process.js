@@ -1,16 +1,25 @@
+import { Typography } from '@mui/material';
 import React from 'react';
-import SectionTitle from './sectionTitle';
+
+import { SectionRoot } from './RootStyles';
 
 const Process = () => {
   return (
-    <>
-      <SectionTitle
-        title='Our Process'
-        subtitle='Lörem ipsum georening buköska vaben. Dögyns eurong. 
-Povisovis josm, emedan semis. Härat rär par. 
-'
-      />
-    </>
+    <SectionRoot>
+      <Typography variant='h3' gutterBottom>
+        Our Process
+      </Typography>
+      <Typography
+        variant='body2'
+        color='textSecondary'
+        className='sectionMaxWid'
+        align='center'
+        fullWidth
+      >
+        Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
+        emedan semis. Härat rär par.
+      </Typography>
+    </SectionRoot>
   );
 };
 
