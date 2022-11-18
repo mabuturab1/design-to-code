@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 import Testimoniolcarousel from './testimoniolcarousel';
 
-import { SectionRoot } from './RootStyles';
+import { SectionRoot } from './CustomComp';
 
 import { testimonialList } from '../data';
 

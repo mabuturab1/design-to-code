@@ -3,7 +3,7 @@ import React from 'react';
 
 import Logo from './logo';
 
-import { SectionRoot } from './RootStyles';
+import { SectionRoot } from './CustomComp';
 
 const NavBarRoot = styled('section')(({ theme }) => ({
   display: 'flex',

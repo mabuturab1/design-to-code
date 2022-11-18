@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar, Box, styled, Typography } from '@mui/material';
 import { Icon } from '@iconify/react';
 
-import { SectionRoot } from './RootStyles';
+import { BackIllustration, SectionRoot } from './CustomComp';
 
 import awsIcon from '@iconify/icons-logos/aws';
 import reactIcon from '@iconify/icons-logos/react';
@@ -19,15 +19,6 @@ import androidIcon from '@iconify/icons-logos/android-icon';
 import postmanIcon from '@iconify/icons-logos/postman-icon';
 import mariadbIcon from '@iconify/icons-logos/mariadb-icon';
 import swiftIcon from '@iconify/icons-logos/swift';
-
-const BackIllustration = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  [theme.breakpoints.down('md')]: {
-    display: 'none',
-  },
-}));
 
 const TechIonsCont = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -86,42 +77,40 @@ const Technologies = () => {
         overflow: 'hidden',
       }}
     >
-      <SectionRoot>
-        <Box position='relative' className='dispFlexColAlgnCen'>
-          <Typography variant='h2' gutterBottom align='center'>
-            Technologies We Work With
-          </Typography>
-          <Typography
-            variant='body1'
-            color='textSecondary'
-            className='sectionMaxWid'
-            align='center'
-          >
-            Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-            emedan semis. Härat rär par.
-          </Typography>
-          <BackIllustration>
-            <picture>
-              <img
-                height='100%'
-                width='100%'
-                src='/static/images/dot2.svg'
-                alt='Landscape picture'
-              />
-            </picture>
-          </BackIllustration>
-          <TechIonsCont>
-            <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(androidIcon, postmanIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(awsIcon, reactIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(pythonIcon, javascriptIcon)}</AvatarCont>
-            <AvatarCont>{avatarExt(vueIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(javaIcon, gitIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(firebaseIcon, atlassianIcon)}</AvatarCont>
-            <AvatarCont>{avatars2(mongodbIcon, postgresqlIcon)}</AvatarCont>
-            <AvatarCont>{avatarExt(swiftIcon)}</AvatarCont>
-          </TechIonsCont>
-        </Box>
+      <SectionRoot className='dispFlexColAlgnCen'>
+        <Typography variant='h2' gutterBottom align='center'>
+          Technologies We Work With
+        </Typography>
+        <Typography
+          variant='body1'
+          color='textSecondary'
+          className='sectionMaxWid'
+          sx={{ textAlign: 'center' }}
+        >
+          Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
+          emedan semis. Härat rär par.
+        </Typography>
+        <BackIllustration>
+          <picture>
+            <img
+              height='100%'
+              width='100%'
+              src='/static/images/dot2.svg'
+              alt='Landscape picture'
+            />
+          </picture>
+        </BackIllustration>
+        <TechIonsCont>
+          <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(androidIcon, postmanIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(awsIcon, reactIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(pythonIcon, javascriptIcon)}</AvatarCont>
+          <AvatarCont>{avatarExt(vueIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(javaIcon, gitIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(firebaseIcon, atlassianIcon)}</AvatarCont>
+          <AvatarCont>{avatars2(mongodbIcon, postgresqlIcon)}</AvatarCont>
+          <AvatarCont>{avatarExt(swiftIcon)}</AvatarCont>
+        </TechIonsCont>
       </SectionRoot>
     </Box>
   );

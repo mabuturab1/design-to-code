@@ -8,6 +8,7 @@ import Technologies from '../src/components/technologies';
 import Feedbackform from '../src/components/feedbackform';
 import { BodyRoot } from '../src/components/RootStyles';
 import Footer from '../src/components/footer';
+import Process from '../src/components/process';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -19,7 +20,7 @@ const Home = () => {
       <BodyRoot>
         <Banner />
         <Services />
-        {/* <OurProcess /> */}
+        <Process />
         <RecentWork />
         <Testimonials />
         <Technologies />

@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import WorkCard from './workCard';
 
-import { SectionRoot } from './RootStyles';
+import { SectionRoot } from './CustomComp';
 
 import { Work } from '../data';
 

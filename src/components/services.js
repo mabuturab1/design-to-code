@@ -1,14 +1,8 @@
 import { Box, styled, Typography } from '@mui/material';
 import React from 'react';
 import { CardInfo } from '../data';
-import { SectionRoot } from './RootStyles';
+import { SectionRoot } from './CustomComp';
 import ServicesCard from './servicesCard';
-
-const ServicesRoot = styled('section')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  flexDirection: 'column',
-}));
 
 const ServCardCont = styled(Box)(({ theme }) => ({
   width: '100%',
@@ -43,7 +37,7 @@ const ServCardCont = styled(Box)(({ theme }) => ({
 const Services = () => {
   return (
     <SectionRoot>
-      <ServicesRoot my={4}>
+      <Box my={4} className='dispFlexColAlgnCen'>
         <Typography variant='h2' gutterBottom>
           Services
         </Typography>
@@ -62,7 +56,7 @@ const Services = () => {
             <ServicesCard key={el.title} {...el} />
           ))}
         </ServCardCont>
-      </ServicesRoot>
+      </Box>
     </SectionRoot>
   );
 };

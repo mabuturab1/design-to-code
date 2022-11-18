@@ -1,6 +1,6 @@
 import { Box, Button, styled, Typography } from '@mui/material';
 import React from 'react';
-import { SectionRoot } from './RootStyles';
+import { SectionRoot } from './CustomComp';
 
 const BannerContainer = styled('section')(({ theme }) => ({
   backgroundImage: `url("/static/images/backLines-cropped.svg")`,

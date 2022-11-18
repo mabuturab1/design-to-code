@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import React from 'react';
-import { SectionRoot } from './RootStyles';
+import { BackIllustration, SectionRoot } from './CustomComp';
 
 const CustomFormControl = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -24,15 +24,6 @@ const GridExt = styled(Grid)(({ theme }) => ({
     '& .MuiGrid-item': {
       flexBasis: '100%',
     },
-  },
-}));
-
-const BackIllustration = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  [theme.breakpoints.down('md')]: {
-    display: 'none',
   },
 }));
 
