@@ -1,9 +1,10 @@
 import { Box, Grid, Link, Rating, styled, Typography } from '@mui/material';
 import React from 'react';
+import { BackIllustration } from './CustomComps';
 
 const Illustration = styled(Box)(({ theme }) => ({
   position: 'absolute',
-  top: 0,
+  top: 15,
   right: 0,
   maxWidth: 130,
   [theme.breakpoints.down('sm')]: {
@@ -79,8 +80,18 @@ const Testimoniolcarousel = (props) => {
         </picture>
       </Illustration>
       <GridExt container spacing={2}>
-        <Grid item xs={12} sm={12} md={5} sx={{ position: 'relative' }}>
+        <Grid item xs={12} sm={12} md={5}>
           <Box width='100%' height='100%' position='relative'>
+            <BackIllustration sx={{ right: -10 }}>
+              <picture>
+                <img
+                  height='100%'
+                  width='100%'
+                  src='/static/images/bgDots.svg'
+                  alt='Landscape picture'
+                />
+              </picture>
+            </BackIllustration>
             <BgBox />
             <ImgBox>
               <img src={userImg} height='100%' width='100%' alt={username} />

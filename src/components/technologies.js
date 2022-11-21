@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar, Box, styled, Typography } from '@mui/material';
 import { Icon } from '@iconify/react';
 
-import { BackIllustration, SectionRoot } from './CustomComp';
+import { BackIllustration, SectionRoot } from './CustomComps';
 
 import awsIcon from '@iconify/icons-logos/aws';
 import reactIcon from '@iconify/icons-logos/react';
@@ -33,6 +33,25 @@ const TechIonsCont = styled(Box)(({ theme }) => ({
   '& > :nth-child(4n+3  )': {
     marginTop: '-5%',
     alignItems: 'center',
+  },
+}));
+
+const BackMajorEclipse = styled(Box)(({ theme }) => ({
+  position: 'absolute',
+  height: '100%',
+  width: '50%',
+  borderRadius: '50%',
+  background: theme.palette.primary.main,
+  opacity: 0.25,
+  filter: 'blur(40px)',
+  bottom: '-35%',
+  right: 0,
+  left: 0,
+  margin: '0 auto',
+
+  [theme.breakpoints.down('md')]: {
+    left: 0,
+    width: '100%',
   },
 }));
 
@@ -77,7 +96,8 @@ const Technologies = () => {
         overflow: 'hidden',
       }}
     >
-      <SectionRoot className='dispFlexColAlgnCen'>
+      <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
+        <BackMajorEclipse />
         <Typography variant='h2' gutterBottom align='center'>
           Technologies We Work With
         </Typography>
@@ -90,7 +110,7 @@ const Technologies = () => {
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.
         </Typography>
-        <BackIllustration>
+        <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
               height='100%'

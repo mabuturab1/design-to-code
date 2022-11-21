@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import React from 'react';
-import { BackIllustration, SectionRoot } from './CustomComp';
+import { BackIllustration, SectionRoot } from './CustomComps';
 
 const CustomFormControl = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -39,7 +39,7 @@ const Feedbackform = () => {
           Love to hear from you. <br />
           Get in Touch
         </Typography>
-        <BackIllustration>
+        <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
               src='/static/images/dots.svg'

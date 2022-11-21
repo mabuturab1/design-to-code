@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from '@mui/material';
 import React from 'react';
 import { CardInfo } from '../data';
-import { SectionRoot } from './CustomComp';
+import { BackIllustration, SectionRoot, SmallBackEllipse } from './CustomComps';
 import ServicesCard from './servicesCard';
 
 const ServCardCont = styled(Box)(({ theme }) => ({
@@ -36,7 +36,18 @@ const ServCardCont = styled(Box)(({ theme }) => ({
 
 const Services = () => {
   return (
-    <SectionRoot>
+    <SectionRoot sx={{ position: 'relative' }}>
+      <SmallBackEllipse sx={{ right: 0, top: 80 }} />
+      <BackIllustration sx={{ left: 60, top: 80 }}>
+        <picture>
+          <img
+            src='/static/images/bgDots.svg'
+            height='100%'
+            width='100%'
+            alt='Landscape picture'
+          />
+        </picture>
+      </BackIllustration>
       <Box my={4} className='dispFlexColAlgnCen'>
         <Typography variant='h2' gutterBottom>
           Services

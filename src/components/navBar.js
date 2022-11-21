@@ -1,9 +1,11 @@
-import { styled, Typography, Box } from '@mui/material';
+import { styled, Typography, Box, IconButton } from '@mui/material';
 import React from 'react';
 
 import Logo from './logo';
 
-import { SectionRoot } from './CustomComp';
+import { SectionRoot } from './CustomComps';
+import { MHidden } from './MHidden';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const NavBarRoot = styled('section')(({ theme }) => ({
   display: 'flex',
@@ -25,14 +27,21 @@ export const NavBar = () => {
     <SectionRoot>
       <NavBarRoot>
         <Logo />
-        <NavbarList>
-          <Typography variant='body2' color='text.primary'>
-            Portfolio
-          </Typography>
-          <Typography variant='body2'>About Us</Typography>
-          <Typography variant='body2'>Blog</Typography>
-          <Typography variant='body2'>Contact Us</Typography>
-        </NavbarList>
+        <MHidden type='down' value='md'>
+          <NavbarList>
+            <Typography variant='body2' color='text.primary'>
+              Portfolio
+            </Typography>
+            <Typography variant='body2'>About Us</Typography>
+            <Typography variant='body2'>Blog</Typography>
+            <Typography variant='body2'>Contact Us</Typography>
+          </NavbarList>
+        </MHidden>
+        <MHidden type='up' value='md'>
+          <IconButton>
+            <MenuOpenIcon />
+          </IconButton>
+        </MHidden>
       </NavBarRoot>
     </SectionRoot>
   );

@@ -56,6 +56,7 @@ export default function GlobalStyles() {
           flexDirection: 'column',
           alignItems: 'center',
         },
+
         '.sectionMaxWid': {
           maxWidth: '35rem',
         },

@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 
 import Logo from './logo';
 
-import { SectionRoot } from './CustomComp';
+import { SectionRoot } from './CustomComps';
 
 import dribbbleIcon from '@iconify/icons-bxl/dribbble';
 import facebookIcon from '@iconify/icons-bxl/facebook';

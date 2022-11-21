@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import WorkCard from './workCard';
 
-import { SectionRoot } from './CustomComp';
+import { BackIllustration, SectionRoot, SmallBackEllipse } from './CustomComps';
 
 import { Work } from '../data';
 
@@ -52,9 +52,11 @@ const RecentWork = () => {
             width: '100vw',
             display: 'flex',
             flexDirection: 'column',
-            gap: '3rem',
+            gap: '4rem',
+            position: 'relative',
           }}
         >
+          <SmallBackEllipse sx={{ right: 20, opacity: 0.3 }} />
           <Box className='dispFlexColAlgnCen'>
             <Typography variant='h2' gutterBottom>
               Recent Work
@@ -79,6 +81,18 @@ const RecentWork = () => {
             <Button variant='contained' color='primary'>
               See More Work
             </Button>
+          </Box>
+          <Box width='100vw' position='relative'>
+            <BackIllustration sx={{ bottom: 20, left: 'calc(100vw-15px)' }}>
+              <picture>
+                <img
+                  height='100%'
+                  width='100%'
+                  src='/static/images/dots.svg'
+                  alt='Landscape picture'
+                />
+              </picture>
+            </BackIllustration>
           </Box>
         </SectionRoot>
       </RecWorkContainer>

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 import Testimoniolcarousel from './testimoniolcarousel';
 
-import { SectionRoot } from './CustomComp';
+import { SectionRoot, SmallBackEllipse } from './CustomComps';
 
 import { testimonialList } from '../data';
 
@@ -68,8 +68,10 @@ const Testimonials = () => {
         display: 'flex',
         flexDirection: 'column',
         gap: '3rem',
+        position: 'relative',
       }}
     >
+      <SmallBackEllipse sx={{ left: 20, opacity: 0.3 }} />
       <Box className='dispFlexColAlgnCen'>
         <Typography variant='h2' gutterBottom align='center'>
           What Customer Say About Us

@@ -1,12 +1,16 @@
 import { Box, Button, styled, Typography } from '@mui/material';
 import React from 'react';
-import { SectionRoot } from './CustomComp';
+import { SectionRoot, SmallBackEllipse } from './CustomComps';
 
-const BannerContainer = styled('section')(({ theme }) => ({
+const BackLines = styled('div')(({ theme }) => ({
   backgroundImage: `url("/static/images/backLines-cropped.svg")`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
+  position: 'relative',
+}));
+
+const BannerContainer = styled('section')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
@@ -25,7 +29,7 @@ const BannerContainer = styled('section')(({ theme }) => ({
     borderRadius: '50%',
     right: 0,
     top: 0,
-    background: '#29AAE3',
+    background: theme.palette.primary.main,
     opacity: 0.25,
     filter: 'blur(40px)',
 
@@ -45,47 +49,50 @@ const BannerImage = styled('div')(({ theme }) => ({
 
 const Banner = () => {
   return (
-    <SectionRoot>
-      <BannerContainer className='sectionGap'>
-        <Box
-          display='flex'
-          flexDirection='column'
-          flexWrap='nowrap'
-          gap='2rem'
-          sx={{ textAlign: { sm: 'center', md: 'start' } }}
-        >
-          <Typography variant='h2'>
-            Get your Website Build Effortlessly
-          </Typography>
-          <Typography variant='body1' component='span' color='text.secondary'>
-            Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev potrena.
-            Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera i dibäs
-            och anat. Vivyng dissa ett astrokad plaledes majyliga. Morade
-            eurosak, infrar.
-          </Typography>
-          <Box>
-            <Button variant='contained' color='primary' size='large'>
-              Get A Quote
-            </Button>
+    <BackLines>
+      <SmallBackEllipse sx={{ left: 0 }} />
+      <SectionRoot>
+        <BannerContainer className='sectionGap'>
+          <Box
+            display='flex'
+            flexDirection='column'
+            flexWrap='nowrap'
+            gap='2rem'
+            sx={{ textAlign: { xs: 'center', sm: 'center', md: 'start' } }}
+          >
+            <Typography variant='h2'>
+              Get your Website Build Effortlessly
+            </Typography>
+            <Typography variant='body1' component='span' color='text.secondary'>
+              Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
+              potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera
+              i dibäs och anat. Vivyng dissa ett astrokad plaledes majyliga.
+              Morade eurosak, infrar.
+            </Typography>
+            <Box>
+              <Button variant='contained' color='primary' size='large'>
+                Get A Quote
+              </Button>
+            </Box>
           </Box>
-        </Box>
-        <BannerImage>
-          <picture>
-            <source
-              srcSet='/static/images/bannerImage-1.svg'
-              type='image/webp'
-            />
-            <img
-              src='/static/images/bannerImage-1.svg'
-              height='100%'
-              width='100%'
-              alt='Landscape picture'
-            />
-          </picture>
-        </BannerImage>
-        <div className='imageBackDrop' />
-      </BannerContainer>
-    </SectionRoot>
+          <BannerImage>
+            <picture>
+              <source
+                srcSet='/static/images/bannerImage-1.svg'
+                type='image/webp'
+              />
+              <img
+                src='/static/images/bannerImage-1.svg'
+                height='100%'
+                width='100%'
+                alt='Landscape picture'
+              />
+            </picture>
+          </BannerImage>
+          <div className='imageBackDrop' />
+        </BannerContainer>
+      </SectionRoot>
+    </BackLines>
   );
 };
 

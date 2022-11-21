@@ -19,7 +19,7 @@ const themeOptions = createTheme({
           boxShadow: 'none',
           fontSize: 20,
           minWidth: '14rem',
-          padding: 10,
+          padding: '15px 10px',
         },
       },
     },
