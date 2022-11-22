@@ -1,16 +1,7 @@
 import { Box, Card, Link, styled, Typography } from '@mui/material';
 import React from 'react';
 
-const CardRoot = styled(Card)(({ theme }) => ({
-  boxShadow: '0px 4px 100px rgba(0, 0, 0, 0.1)',
-  borderRadius: 20,
-  padding: '3rem 3rem',
-  display: 'flex',
-  alignItems: 'center',
-  flexDirection: 'column',
-  textAlign: 'center',
-  gap: '1rem',
-}));
+import { CardRoot } from './styled';
 
 const ServicesCard = (props) => {
   const { title, desc, link, img } = props;

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 
-const Logo = ({ sx, ...other }) => {
+export const Logo = ({ sx, ...other }) => {
   return (
     <Box
       component='div'
@@ -14,7 +14,7 @@ const Logo = ({ sx, ...other }) => {
       {...other}
     >
       <picture>
-        <source srcSet='/static/images/logo.svg' type='image/webp' />
+        {/* <source srcSet='/static/images/logo.svg' type='image/webp' /> */}
         <img
           src='/static/images/logo.svg'
           height='100%'
@@ -25,5 +25,3 @@ const Logo = ({ sx, ...other }) => {
     </Box>
   );
 };
-
-export default Logo;

@@ -3,48 +3,15 @@ import React from 'react';
 import clsx from 'clsx';
 
 import WorkCard from './workCard';
+import { BackIllustration, SectionRoot, SmallBackEllipse } from '../custom';
 
-import { BackIllustration, SectionRoot, SmallBackEllipse } from './CustomComps';
+import { RecWorkContainer, CardContainer, RootStyle } from './styled';
 
-import { Work } from '../data';
-
-const RecWorkContainer = styled(Box)(({ theme }) => ({
-  width: '200%',
-  height: '100%',
-  borderRadius: '50%',
-  background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
-  left: '-50%',
-  right: 0,
-  position: 'relative',
-
-  [theme.breakpoints.down('449')]: {
-    width: '300%',
-    left: '-100%',
-  },
-}));
-
-const CardContainer = styled('div')(({ theme }) => ({
-  display: 'grid',
-  gridGap: '2rem',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-
-  [theme.breakpoints.between('450', '543')]: {
-    gridTemplateColumns: 'repeat(2, 1fr)',
-  },
-  [theme.breakpoints.down('449')]: {
-    gridTemplateColumns: 'repeat(1, 1fr)',
-  },
-}));
+import { Work } from '../../data';
 
 const RecentWork = () => {
   return (
-    <Box
-      width='100%'
-      height='fit-content'
-      overflow='hidden'
-      position='relative'
-      mb={4}
-    >
+    <RootStyle mb={4}>
       <RecWorkContainer pt={9}>
         <SectionRoot
           className='sectionGap'
@@ -96,7 +63,7 @@ const RecentWork = () => {
           </Box>
         </SectionRoot>
       </RecWorkContainer>
-    </Box>
+    </RootStyle>
   );
 };
 

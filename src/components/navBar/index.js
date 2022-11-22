@@ -1,26 +1,12 @@
 import { styled, Typography, Box, IconButton } from '@mui/material';
 import React from 'react';
 
-import Logo from './logo';
+import { Logo } from '../Logo';
 
-import { SectionRoot } from './CustomComps';
-import { MHidden } from './MHidden';
+import { SectionRoot } from '../custom';
+import { MHidden } from '../custom/MHidden';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-
-const NavBarRoot = styled('section')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  flexWrap: 'nowrap',
-  justifyContent: 'space-between',
-  gap: '1.5rem',
-}));
-
-const NavbarList = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  flexWrap: 'nowrap',
-  gap: '0.8rem',
-}));
+import { NavbarList, NavBarRoot } from './styled';
 
 export const NavBar = () => {
   return (

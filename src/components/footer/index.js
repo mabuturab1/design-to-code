@@ -2,35 +2,20 @@ import { Avatar, Box, styled, Typography } from '@mui/material';
 import React from 'react';
 import { Icon } from '@iconify/react';
 
-import Logo from './logo';
+import { Logo } from '../logo';
 
-import { SectionRoot } from './CustomComps';
-
+import { SectionRoot } from '../custom';
 import dribbbleIcon from '@iconify/icons-bxl/dribbble';
 import facebookIcon from '@iconify/icons-bxl/facebook';
 import twitterIcon from '@iconify/icons-bxl/twitter';
 import youtubeIcon from '@iconify/icons-bxl/youtube';
+import { FooterContainerStyle, InnerContainer } from './styled';
 
-export const getIcon = (name) => (
+const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
 );
 
-const FooterContainerStyle = styled('div')(({ theme }) => ({
-  display: 'flex',
-  gap: '1.5rem',
-  justifyContent: 'space-between',
-  alignItems: 'baseline',
-  paddingBlock: '4rem',
-  flexWrap: 'wrap',
-}));
-
-const InnerContainer = styled('div')(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100%',
-}));
-
-const Footer = () => {
+export const Footer = () => {
   return (
     <SectionRoot>
       <Box pb={7}>
@@ -122,5 +107,3 @@ const Footer = () => {
     </SectionRoot>
   );
 };
-
-export default Footer;

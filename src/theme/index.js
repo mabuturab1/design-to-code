@@ -2,7 +2,6 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import palette from './palette';
 import typography from './typography';
-import ButtonOverride from './ButtonOverride';
 import breakpoints from './breakpoints';
 
 // Create a theme instance.

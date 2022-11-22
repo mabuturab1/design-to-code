@@ -4,12 +4,13 @@ import Slider from 'react-slick';
 
 import Testimoniolcarousel from './testimoniolcarousel';
 
-import { SectionRoot, SmallBackEllipse } from './CustomComps';
+import { SectionRoot, SmallBackEllipse } from '../custom';
 
-import { testimonialList } from '../data';
+import { testimonialList } from '../../data';
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ArrowStyled } from './styled';
 
 const sliderSettings = {
   fade: true,
@@ -17,30 +18,6 @@ const sliderSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
-
-const ArrowStyled = styled('div')(({ theme }) => ({
-  '&.slick-arrow': {
-    boxShadow: '0px 14px 14px rgba(0, 0, 0, 0.1)',
-    backgroundColor: '#fff',
-    borderRadius: '50%',
-    zIndex: 22,
-    width: 55,
-    height: 55,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  '&.slick-prev:before, &.slick-next:before': {
-    display: 'none',
-  },
-  '&.slick-prev': {
-    left: 10,
-  },
-  '&.slick-next': {
-    right: 10,
-  },
-}));
 
 const PreviousBtn = (props) => {
   const { className, onClick } = props;
@@ -81,7 +58,6 @@ const Testimonials = () => {
           color='textSecondary'
           className='sectionMaxWid'
           align='center'
-          fullWidth
         >
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.

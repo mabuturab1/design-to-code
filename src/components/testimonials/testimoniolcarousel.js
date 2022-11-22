@@ -1,69 +1,7 @@
 import { Box, Grid, Link, Rating, styled, Typography } from '@mui/material';
 import React from 'react';
-import { BackIllustration } from './CustomComps';
-
-const Illustration = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  top: 15,
-  right: 0,
-  maxWidth: 130,
-  [theme.breakpoints.down('sm')]: {
-    display: 'none',
-  },
-}));
-
-const ImgBox = styled(Box)(({ theme }) => ({
-  paddingInline: '3rem',
-  height: '100%',
-  width: '100%',
-  position: 'relative',
-  '& > img': {
-    width: '100%',
-    maxHeight: 400,
-    objectFit: 'contain',
-    zIndex: 1,
-    [theme.breakpoints.down('md')]: {
-      maxHeight: 360,
-    },
-    [theme.breakpoints.down('xs')]: {
-      maxHeight: 300,
-    },
-  },
-}));
-
-const BgBox = styled(Box)(({ theme }) => ({
-  borderRadius: '50%',
-  backgroundColor: theme.palette.primary.main,
-  position: 'absolute',
-  width: '90%',
-  height: '90%',
-  left: '5%',
-  right: '5%',
-  top: '5%',
-  [theme.breakpoints.down('md')]: {
-    width: '50%',
-    height: '85%',
-    top: '10%',
-    marginInline: 'auto',
-  },
-  [theme.breakpoints.down('sm')]: {
-    width: '70%',
-    height: '75%',
-    marginInline: 'auto',
-  },
-  [theme.breakpoints.down('xs')]: {
-    width: 150,
-    height: 150,
-  },
-}));
-
-const GridExt = styled(Grid)(({ theme }) => ({
-  [theme.breakpoints.down('600')]: {
-    '& .MuiGrid-item': {
-      flexBasis: '100%',
-    },
-  },
-}));
+import { BackIllustration } from '../custom';
+import { BgBox, GridExt, Illustration, ImgBox } from './styled';
 
 const Testimoniolcarousel = (props) => {
   const { userImg, username, rating, message } = props;

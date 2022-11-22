@@ -1,71 +1,25 @@
 import {
-  Box,
   Button,
   FormControl,
   Grid,
   MenuItem,
   Select,
-  styled,
   TextField,
   Typography,
 } from '@mui/material';
 import React from 'react';
-import { BackIllustration, SectionRoot } from './CustomComps';
+import { CustomFormControl, GridExt } from './styled';
 
-const CustomFormControl = styled('div')(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '0.5rem',
-  width: '100%',
-}));
-
-const GridExt = styled(Grid)(({ theme }) => ({
-  [theme.breakpoints.down('600')]: {
-    '& .MuiGrid-item': {
-      flexBasis: '100%',
-    },
-  },
-}));
-
-const Feedbackform = () => {
+export const Feedbackform = () => {
+  const handleSubmit = () => {
+    console.log('Form Submitted');
+  };
   return (
-    <SectionRoot>
-      <Box position='relative'>
-        <Typography
-          variant='h2'
-          gutterBottom
-          sx={{ textAlign: { sm: 'center', md: 'left' } }}
-        >
-          Love to hear from you. <br />
-          Get in Touch
-        </Typography>
-        <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
-          <picture>
-            <img
-              src='/static/images/dots.svg'
-              height='100%'
-              width='100%'
-              alt='Landscape picture'
-            />
-          </picture>
-        </BackIllustration>
-      </Box>
-      <Typography
-        variant='body1'
-        color='textSecondary'
-        fullWidth
-        sx={{ textAlign: { sm: 'center', md: 'left' } }}
-      >
-        Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-        emedan semis. Härat rär par.
-      </Typography>
-
+    <form onSubmit={handleSubmit}>
       <GridExt container spacing={5} mt={6}>
         <Grid item sm={12} md={6}>
           <CustomFormControl>
-            <Typography variant='subtitle1' fullWidth>
-              Name
-            </Typography>
+            <Typography variant='subtitle1'>Name</Typography>
             <TextField
               name='name'
               value=''
@@ -77,9 +31,7 @@ const Feedbackform = () => {
         </Grid>
         <Grid item sm={12} md={6}>
           <CustomFormControl>
-            <Typography variant='subtitle1' fullWidth>
-              Your Email
-            </Typography>
+            <Typography variant='subtitle1'>Your Email</Typography>
             <TextField
               name='email'
               type='email'
@@ -92,7 +44,7 @@ const Feedbackform = () => {
         </Grid>
         <Grid item sm={12} md={6}>
           <CustomFormControl>
-            <Typography variant='subtitle1' fullWidth>
+            <Typography variant='subtitle1'>
               What are you interested in?
             </Typography>
             <FormControl fullWidth>
@@ -111,9 +63,7 @@ const Feedbackform = () => {
         </Grid>
         <Grid item sm={12} md={6}>
           <CustomFormControl>
-            <Typography variant='subtitle1' fullWidth>
-              Your budget?
-            </Typography>
+            <Typography variant='subtitle1'>Your budget?</Typography>
             <FormControl fullWidth>
               <Select name='budget' value={0}>
                 <MenuItem value={0}>$500 - $1000</MenuItem>
@@ -125,9 +75,7 @@ const Feedbackform = () => {
         </Grid>
         <Grid item sm={12}>
           <CustomFormControl>
-            <Typography variant='subtitle1' fullWidth>
-              Message
-            </Typography>
+            <Typography variant='subtitle1'>Message</Typography>
             <TextField
               name='message'
               value=''
@@ -139,11 +87,11 @@ const Feedbackform = () => {
           </CustomFormControl>
         </Grid>
         <Grid item sm={12} sx={{ textAlign: 'right' }}>
-          <Button variant='contained'>Send Message</Button>
+          <Button variant='contained' type='submit'>
+            Send Message
+          </Button>
         </Grid>
       </GridExt>
-    </SectionRoot>
+    </form>
   );
 };
-
-export default Feedbackform;

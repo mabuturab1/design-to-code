@@ -1,14 +1,14 @@
 import React from 'react';
-import Banner from '../src/components/Banner';
+import Banner from '../src/components/banner';
 import { NavBar } from '../src/components/navBar';
-import Services from '../src/components/services';
-import RecentWork from '../src/components/recentWork';
+import Services from '../src/components/ourServices';
+import RecentWork from '../src/components/ourWork';
 import Testimonials from '../src/components/testimonials';
 import Technologies from '../src/components/technologies';
-import Feedbackform from '../src/components/feedbackform';
-import { BodyRoot } from '../src/components/RootStyles';
-import Footer from '../src/components/footer';
-import Process from '../src/components/process';
+import Feedbackform from '../src/components/feedback';
+import { BodyRoot } from '../src/components/custom';
+import { Footer } from '../src/components/footer';
+import Process from '../src/components/ourProcess';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

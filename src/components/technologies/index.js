@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar, Box, styled, Typography } from '@mui/material';
 import { Icon } from '@iconify/react';
 
-import { BackIllustration, SectionRoot } from './CustomComps';
+import { BackIllustration, SectionRoot } from '../custom';
 
 import awsIcon from '@iconify/icons-logos/aws';
 import reactIcon from '@iconify/icons-logos/react';
@@ -19,41 +19,7 @@ import androidIcon from '@iconify/icons-logos/android-icon';
 import postmanIcon from '@iconify/icons-logos/postman-icon';
 import mariadbIcon from '@iconify/icons-logos/mariadb-icon';
 import swiftIcon from '@iconify/icons-logos/swift';
-
-const TechIonsCont = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexWrap: 'no-wrap',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '1rem',
-  width: '100%',
-  marginTop: '4rem',
-  marginBottom: '-5%',
-
-  '& > :nth-child(4n+3  )': {
-    marginTop: '-5%',
-    alignItems: 'center',
-  },
-}));
-
-const BackMajorEclipse = styled(Box)(({ theme }) => ({
-  position: 'absolute',
-  height: '100%',
-  width: '50%',
-  borderRadius: '50%',
-  background: theme.palette.primary.main,
-  opacity: 0.25,
-  filter: 'blur(40px)',
-  bottom: '-35%',
-  right: 0,
-  left: 0,
-  margin: '0 auto',
-
-  [theme.breakpoints.down('md')]: {
-    left: 0,
-    width: '100%',
-  },
-}));
+import { BackMajorEclipse, TechIonsCont } from './styled';
 
 const avatarSize = { width: 90, height: 90 };
 
@@ -70,7 +36,7 @@ const avatarExt = (icon) => {
   );
 };
 
-const avatars2 = (icon1, icon2) => {
+const avatars_2 = (icon1, icon2) => {
   return (
     <React.Fragment>
       {avatarExt(icon1)}
@@ -122,13 +88,13 @@ const Technologies = () => {
         </BackIllustration>
         <TechIonsCont>
           <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(androidIcon, postmanIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(awsIcon, reactIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(pythonIcon, javascriptIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(androidIcon, postmanIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(awsIcon, reactIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(pythonIcon, javascriptIcon)}</AvatarCont>
           <AvatarCont>{avatarExt(vueIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(javaIcon, gitIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(firebaseIcon, atlassianIcon)}</AvatarCont>
-          <AvatarCont>{avatars2(mongodbIcon, postgresqlIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(javaIcon, gitIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(firebaseIcon, atlassianIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(mongodbIcon, postgresqlIcon)}</AvatarCont>
           <AvatarCont>{avatarExt(swiftIcon)}</AvatarCont>
         </TechIonsCont>
       </SectionRoot>
