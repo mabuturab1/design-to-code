@@ -2,7 +2,7 @@ import { Avatar, Box, styled, Typography } from '@mui/material';
 import React from 'react';
 import { Icon } from '@iconify/react';
 
-import { Logo } from '../logo';
+import { Logo } from '../Logo';
 
 import { SectionRoot } from '../custom';
 import dribbbleIcon from '@iconify/icons-bxl/dribbble';
