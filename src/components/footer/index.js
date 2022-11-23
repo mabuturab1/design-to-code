@@ -9,7 +9,7 @@ import dribbbleIcon from '@iconify/icons-bxl/dribbble';
 import facebookIcon from '@iconify/icons-bxl/facebook';
 import twitterIcon from '@iconify/icons-bxl/twitter';
 import youtubeIcon from '@iconify/icons-bxl/youtube';
-import { FooterContainerStyle, InnerContainer } from './styled';
+import { CompInfoCont, FooterContainerStyle, LinkContent } from './styled';
 
 const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
@@ -20,13 +20,9 @@ export const Footer = () => {
     <SectionRoot>
       <Box pb={7}>
         <FooterContainerStyle>
-          <InnerContainer sx={{ gap: '1.5rem' }}>
+          <CompInfoCont sx={{ gap: '1.5rem', flex: 1 }}>
             <Logo />
-            <Typography
-              variant='body1'
-              color='textSecondary'
-              sx={{ width: '20rem' }}
-            >
+            <Typography variant='body1' color='textSecondary'>
               Lörem ipsum aras beskade nede plakar. Sad monorade. Söven fade
               negon. Samösat neras pykäs. Preligt anas egoliga. Astrovis låvis
               revis an.
@@ -45,64 +41,70 @@ export const Footer = () => {
                 {getIcon(dribbbleIcon)}
               </Avatar>
             </Box>
-          </InnerContainer>
-          <InnerContainer sx={{ gap: '0.5rem' }}>
-            <Typography variant='subtitle1' mb={1}>
-              Quick Links
+            <Typography variant='body2' sx={{ marginTop: '2rem' }}>
+              @ ConovoTach 2022
             </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              About
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Pricing
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Blog
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Contact Us
-            </Typography>
-          </InnerContainer>
-          <InnerContainer sx={{ gap: '0.5rem', alignItems: 'flex-start' }}>
-            <Typography variant='subtitle1' mb={1}>
-              Others
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Why ConovoTech?
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              How it works
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              FAQ
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Affiliates
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              How to get More Sales
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Customer Support
-            </Typography>
-          </InnerContainer>
-          <InnerContainer sx={{ gap: '0.5rem' }}>
-            <Typography mb={1} />
-            <Typography variant='body1' color='textSecondary'>
-              Privacy Policy
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Terms and Conditions
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Cookie Policy
-            </Typography>
-            <Typography variant='body1' color='textSecondary'>
-              Language
-            </Typography>
-          </InnerContainer>
+          </CompInfoCont>
+          <LinkContent>
+            <Box>
+              <Typography variant='subtitle1' mb={1}>
+                Quick Links
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                About
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Pricing
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Blog
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Contact Us
+              </Typography>
+            </Box>
+            <Box sx={{ alignItems: 'flex-start' }}>
+              <Typography variant='subtitle1' mb={1}>
+                Others
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Why ConovoTech?
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                How it works
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                FAQ
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Affiliates
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                How to get More Sales
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Customer Support
+              </Typography>
+            </Box>
+            <Box>
+              <Typography variant='body1' mb={1} sx={{ visibility: 'hidden' }}>
+                Company Policies
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Privacy Policy
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Terms and Conditions
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Cookie Policy
+              </Typography>
+              <Typography variant='body1' color='textSecondary'>
+                Language
+              </Typography>
+            </Box>
+          </LinkContent>
         </FooterContainerStyle>
-        <Typography variant='body2'>@ ConovoTach 2022</Typography>
       </Box>
     </SectionRoot>
   );

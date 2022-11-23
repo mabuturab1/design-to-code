@@ -11,7 +11,7 @@ import { Work } from '../../data';
 
 const RecentWork = () => {
   return (
-    <RootStyle mb={4}>
+    <RootStyle>
       <RecWorkContainer pt={9}>
         <SectionRoot
           className='sectionGap'

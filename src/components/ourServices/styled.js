@@ -6,10 +6,17 @@ export const ServCardCont = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   gap: '3.5rem',
   flexWrap: 'wrap',
+  justifyContent: 'center',
 
   [theme.breakpoints.up('md')]: {
-    justifyContent: 'space-between',
     flexWrap: 'nowrap',
+    justifyContent: 'space-between',
+  },
+  [theme.breakpoints.down('md')]: {
+    gap: '3rem',
+  },
+  [theme.breakpoints.down('sm')]: {
+    gap: '2rem',
   },
 
   '& > div:nth-of-type(2)': {
@@ -33,10 +40,18 @@ export const ServCardCont = styled(Box)(({ theme }) => ({
 export const CardRoot = styled(Card)(({ theme }) => ({
   boxShadow: '0px 4px 100px rgba(0, 0, 0, 0.1)',
   borderRadius: 20,
-  padding: '3rem 3rem',
+  padding: '3rem',
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
   textAlign: 'center',
   gap: '1rem',
+  maxWidth: 340,
+
+  [theme.breakpoints.down('lg')]: {
+    padding: '2rem',
+  },
+  [theme.breakpoints.down('md')]: {
+    maxWidth: 295,
+  },
 }));

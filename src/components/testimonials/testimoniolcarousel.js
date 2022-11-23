@@ -25,7 +25,7 @@ const Testimoniolcarousel = (props) => {
                 <img
                   height='100%'
                   width='100%'
-                  src='/static/images/bgDots.svg'
+                  src='/static/images/backDots.svg'
                   alt='Landscape picture'
                 />
               </picture>

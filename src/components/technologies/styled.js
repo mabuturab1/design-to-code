@@ -5,7 +5,7 @@ export const TechIonsCont = styled(Box)(({ theme }) => ({
   flexWrap: 'no-wrap',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '1rem',
+  gap: '1.5rem',
   width: '100%',
   marginTop: '4rem',
   marginBottom: '-5%',

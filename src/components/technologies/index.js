@@ -47,7 +47,7 @@ const avatars_2 = (icon1, icon2) => {
 
 const AvatarCont = ({ children }) => {
   return (
-    <Box className='dispFlexColAlgnCen' sx={{ gap: '1rem' }}>
+    <Box className='dispFlexColAlgnCen' sx={{ gap: '1.5rem' }}>
       {children}
     </Box>
   );

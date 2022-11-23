@@ -1,6 +1,6 @@
 import { Box, Button, styled, Typography } from '@mui/material';
 import React from 'react';
-import { SectionRoot, SmallBackEllipse } from '../custom';
+import { BackIllustration, SectionRoot, SmallBackEllipse } from '../custom';
 import {
   BackLines,
   BannerContainer,
@@ -12,7 +12,17 @@ const Banner = () => {
   return (
     <BackLines>
       <SmallBackEllipse sx={{ left: 0 }} />
-      <SectionRoot>
+      <SectionRoot sx={{ position: 'relative' }}>
+        <BackIllustration sx={{ bottom: 0, right: 0 }}>
+          <picture>
+            <img
+              src='/static/images/banner_bg.svg'
+              height='100%'
+              width='100%'
+              alt='Landscape picture'
+            />
+          </picture>
+        </BackIllustration>
         <BannerContainer className='sectionGap'>
           <HeaderTextContent
             sx={{ textAlign: { xs: 'center', sm: 'center', md: 'start' } }}
