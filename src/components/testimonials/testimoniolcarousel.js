@@ -1,7 +1,7 @@
 import { Box, Grid, Link, Rating, styled, Typography } from '@mui/material';
 import React from 'react';
 import { BackIllustration } from '../custom';
-import { BgBox, GridExt, Illustration, ImgBox } from './styled';
+import { BgBox, Eclipse, GridExt, Illustration, ImgBox } from './styled';
 
 const Testimoniolcarousel = (props) => {
   const { userImg, username, rating, message } = props;
@@ -19,7 +19,12 @@ const Testimoniolcarousel = (props) => {
       </Illustration>
       <GridExt container spacing={2}>
         <Grid item xs={12} sm={12} md={5}>
-          <Box width='100%' height='100%' position='relative'>
+          <Box
+            width='100%'
+            height='100%'
+            position='relative'
+            sx={{ objectFit: 'contain' }}
+          >
             <BackIllustration sx={{ right: -10 }}>
               <picture>
                 <img
@@ -30,9 +35,12 @@ const Testimoniolcarousel = (props) => {
                 />
               </picture>
             </BackIllustration>
-            <BgBox />
+            {/* <BgBox /> */}
+            <Eclipse />
             <ImgBox>
-              <img src={userImg} height='100%' width='100%' alt={username} />
+              <picture>
+                <img src={userImg} height='100%' width='100%' alt={username} />
+              </picture>
             </ImgBox>
           </Box>
         </Grid>

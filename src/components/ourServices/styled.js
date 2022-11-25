@@ -19,21 +19,10 @@ export const ServCardCont = styled(Box)(({ theme }) => ({
     gap: '2rem',
   },
 
-  '& > div:nth-of-type(2)': {
-    [theme.breakpoints.up('md')]: {
-      marginTop: '-7.5rem',
-    },
-  },
-
-  // display: 'grid',
-  // gridGap: '1rem',
-  // gridTemplateColumns: 'repeat(3, 1fr)',
-
-  // [theme.breakpoints.down('md')]: {
-  //   gridTemplateColumns: 'repeat(2, 1fr)',
-  // },
-  // [theme.breakpoints.down('449')]: {
-  //   gridTemplateColumns: 'repeat(1, 1fr)',
+  // '& > div:nth-of-type(2)': {
+  //   [theme.breakpoints.up('md')]: {
+  //     marginTop: '-7.5rem',
+  //   },
   // },
 }));
 

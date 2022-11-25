@@ -9,7 +9,12 @@ import dribbbleIcon from '@iconify/icons-bxl/dribbble';
 import facebookIcon from '@iconify/icons-bxl/facebook';
 import twitterIcon from '@iconify/icons-bxl/twitter';
 import youtubeIcon from '@iconify/icons-bxl/youtube';
-import { CompInfoCont, FooterContainerStyle, LinkContent } from './styled';
+import {
+  CompInfoCont,
+  FooterContainerStyle,
+  LinkContent,
+  TypoEnd,
+} from './styled';
 
 const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
@@ -41,9 +46,6 @@ export const Footer = () => {
                 {getIcon(dribbbleIcon)}
               </Avatar>
             </Box>
-            <Typography variant='body2' sx={{ marginTop: '2rem' }}>
-              @ ConovoTach 2022
-            </Typography>
           </CompInfoCont>
           <LinkContent>
             <Box>
@@ -105,6 +107,7 @@ export const Footer = () => {
             </Box>
           </LinkContent>
         </FooterContainerStyle>
+        <TypoEnd variant='body2'>@ ConovoTach 2022</TypoEnd>
       </Box>
     </SectionRoot>
   );

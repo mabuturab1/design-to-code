@@ -23,6 +23,7 @@ import {
   TimelineDotExt,
   TypoExt,
 } from './styled';
+import HorizontalStepper from './HorizontalTimeline';
 
 const Process = () => {
   return (
@@ -52,7 +53,9 @@ const Process = () => {
           </picture>
         </BackIllustration>
       </Box>
-      <MHidden type='down' value='md'>
+      <HorizontalStepper />
+
+      {/* <MHidden type='down' value='md'>
         <Timeline position={'alternate'} sx={{ mt: 5 }}>
           <TimelineItem>
             <TimelineOppositeContent
@@ -190,7 +193,7 @@ const Process = () => {
             </Typography>
           </div>
         </MobileContent>
-      </MHidden>
+      </MHidden> */}
     </SectionRoot>
   );
 };

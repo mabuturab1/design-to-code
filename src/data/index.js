@@ -33,25 +33,39 @@ export const Work = [
 
 export const testimonialList = [
   {
-    userImg: '/static/images/testimonial.png',
-    username: 'Ashley Mathew',
+    userImg: '/static/images/user.jpg',
+    username: 'Alex Smith',
     rating: 5,
     message:
-      'Using Conovotech I have setup my store 10 days and was ready to get sales. Conovotech has really made it easy for business owners',
+      'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
   },
   {
-    userImg: '/static/images/testimonial.png',
+    userImg: '/static/images/user.jpg',
     username: 'Silva De Ro',
     rating: 5,
     message:
-      'Using Conovotech I have setup my store 10 days and was ready to get sales.',
+      'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
   },
   {
-    userImg: '/static/images/testimonial.png',
+    userImg: '/static/images/user.jpg',
     username: 'John Makho',
     rating: 5,
     message:
-      'Using Conovotech I have setup my store 10 days and was ready to get sales. Conovotech has really made it easy for business owners',
+      'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+  },
+  {
+    userImg: '/static/images/user.jpg',
+    username: 'Alex Smith',
+    rating: 5,
+    message:
+      'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+  },
+  {
+    userImg: '/static/images/user.jpg',
+    username: 'Silva De Ro',
+    rating: 5,
+    message:
+      'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
   },
 ];
 

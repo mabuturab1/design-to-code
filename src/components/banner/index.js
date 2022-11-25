@@ -23,7 +23,7 @@ const Banner = () => {
             />
           </picture>
         </BackIllustration>
-        <BannerContainer className='sectionGap'>
+        <BannerContainer>
           <HeaderTextContent
             sx={{ textAlign: { xs: 'center', sm: 'center', md: 'start' } }}
           >

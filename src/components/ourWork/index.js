@@ -14,7 +14,6 @@ const RecentWork = () => {
     <RootStyle>
       <RecWorkContainer pt={9}>
         <SectionRoot
-          className='sectionGap'
           sx={{
             width: '100vw',
             display: 'flex',

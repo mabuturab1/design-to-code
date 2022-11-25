@@ -1,9 +1,11 @@
 import { Box, Grid, styled } from '@mui/material';
+import Slider from 'react-slick';
 
 export const ArrowStyled = styled('div')(({ theme }) => ({
   '&.slick-arrow': {
-    boxShadow: '0px 14px 14px rgba(0, 0, 0, 0.1)',
-    backgroundColor: '#fff',
+    // boxShadow: '0px 14px 14px rgba(0, 0, 0, 0.1)',
+    backgroundColor: theme.palette.primary.main,
+    color: '#fff',
     borderRadius: '50%',
     zIndex: 22,
     width: 55,
@@ -16,12 +18,36 @@ export const ArrowStyled = styled('div')(({ theme }) => ({
   '&.slick-prev:before, &.slick-next:before': {
     display: 'none',
   },
+
+  // '&.slick-prev': {
+  //   left: 18,
+  //   top: '50%',
+  // },
+  // '&.slick-next': {
+  //   right: 18,
+  //   top: '50%',
+  // },
+  // [theme.breakpoints.down('700')]: {
   '&.slick-prev': {
-    left: 10,
+    left: '50%',
+    top: '110%',
+    transform: 'translateX(-64px)',
   },
   '&.slick-next': {
-    right: 10,
+    right: '50%',
+    top: '110%',
+    transform: 'translateX(64px)',
   },
+  // },
+
+  // [theme.breakpoints.up('xs')]: {
+  //   '&.slick-prev': {
+  //     left: 10,
+  //   },
+  //   '&.slick-next': {
+  //     right: 10,
+  //   },
+  // },
 }));
 
 export const Illustration = styled(Box)(({ theme }) => ({
@@ -39,7 +65,7 @@ export const ImgBox = styled(Box)(({ theme }) => ({
   height: '100%',
   width: '100%',
   position: 'relative',
-  '& > img': {
+  '& img': {
     width: '100%',
     maxHeight: 400,
     objectFit: 'contain',
@@ -53,30 +79,16 @@ export const ImgBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const BgBox = styled(Box)(({ theme }) => ({
-  borderRadius: '50%',
-  backgroundColor: theme.palette.primary.main,
+export const Eclipse = styled(Box)(({ theme }) => ({
+  backgroundImage: `url("/static/images/eclippse.svg")`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: ' contain',
   position: 'absolute',
-  width: '90%',
-  height: '90%',
-  left: '5%',
-  right: '5%',
-  top: '5%',
-  [theme.breakpoints.down('md')]: {
-    width: '50%',
-    height: '85%',
-    top: '10%',
-    marginInline: 'auto',
-  },
-  [theme.breakpoints.down('sm')]: {
-    width: '70%',
-    height: '75%',
-    marginInline: 'auto',
-  },
-  [theme.breakpoints.down('xs')]: {
-    width: 150,
-    height: 150,
-  },
+  width: '100%',
+  top: 0,
+  right: 0,
+  height: '100%',
 }));
 
 export const GridExt = styled(Grid)(({ theme }) => ({
@@ -84,5 +96,24 @@ export const GridExt = styled(Grid)(({ theme }) => ({
     '& .MuiGrid-item': {
       flexBasis: '100%',
     },
+  },
+}));
+
+export const TestimonialCardRoot = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1.5rem',
+  backgroundColor: theme.palette.background.neutral,
+  borderRadius: 10,
+  padding: '1.5rem',
+  // maxWidth: 400,
+  // '&:not(:last-of-type)': {
+  //   marginRight: '2rem !important',
+  // },
+}));
+
+export const SliderRoot = styled(Slider)(({ theme }) => ({
+  '& .slick-track > .card:not(:last-of-type)': {
+    marginRight: '2rem',
   },
 }));

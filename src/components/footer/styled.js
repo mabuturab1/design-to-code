@@ -1,15 +1,15 @@
-import { Box, styled } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 
 export const FooterContainerStyle = styled('div')(({ theme }) => ({
   display: 'flex',
   gap: '1.5rem',
   justifyContent: 'space-between',
   alignItems: 'baseline',
-  paddingBlock: '4rem',
   flexWrap: 'wrap',
   [theme.breakpoints.down('1000')]: {
-    flexDirection: 'column-reverse',
+    flexDirection: 'column',
     gap: '3rem',
+    paddingBottom: '3rem',
   },
 }));
 
@@ -49,5 +49,12 @@ export const LinkContent = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down('600')]: {
       alignItems: 'center',
     },
+  },
+}));
+
+export const TypoEnd = styled(Typography)(({ theme }) => ({
+  marginTop: '2rem',
+  [theme.breakpoints.down('1000')]: {
+    textAlign: 'center',
   },
 }));

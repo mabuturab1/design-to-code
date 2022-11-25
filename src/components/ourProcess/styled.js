@@ -1,5 +1,14 @@
-import { Box, styled, Typography } from '@mui/material';
+import {
+  Box,
+  StepConnector,
+  StepContent,
+  StepLabel,
+  Stepper,
+  styled,
+  Typography,
+} from '@mui/material';
 import { TimelineConnector, TimelineDot } from '@mui/lab';
+import { stepConnectorClasses } from '@mui/material/StepConnector';
 
 export const TypoExt = styled(Typography)(({ theme }) => ({
   fontSize: '14rem',
@@ -12,6 +21,7 @@ export const TypoExt = styled(Typography)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     fontSize: '11rem',
+    color: theme.palette.primary.main,
     lineHeight: 1,
   },
   [theme.breakpoints.down('xs')]: {
@@ -45,7 +55,7 @@ export const MobileContent = styled(Box)(({ theme }) => ({
   gap: '1.5rem',
 
   [theme.breakpoints.down('xs')]: {
-    gap: '2rem',
+    gap: '3rem',
     '& p': {
       textAlign: 'justify',
     },
@@ -112,4 +122,79 @@ export const BulletCircle = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     display: 'none',
   },
+}));
+
+// ^  Stepper Styles
+
+export const QontoStepIconRoot = styled('div')(({ theme }) => ({
+  color: theme.palette.primary.main,
+  display: 'flex',
+  height: 22,
+  alignItems: 'center',
+
+  '& .QontoStepIcon-circle': {
+    width: 20,
+    height: 20,
+    borderRadius: '50%',
+    backgroundColor: 'currentColor',
+  },
+}));
+
+export const StepperConnectorVerExt = styled(Box)(({ theme }) => ({
+  position: 'absolute',
+  left: 17,
+  width: 3,
+  height: 'calc(100% - 20px)',
+  backgroundColor: theme.palette.primary.main,
+  top: 10,
+  zIndex: 2,
+}));
+
+export const StepperConnectorHorExt = styled(Box)(({ theme }) => ({
+  flex: '1 1 auto',
+  position: 'absolute',
+  top: 9,
+
+  '& span': {
+    display: 'block',
+    borderTopStyle: 'solid',
+    borderColor: theme.palette.primary.main,
+    borderTopWidth: 3,
+    // borderRadius: 1,
+  },
+}));
+
+export const QontoConnector = styled(StepConnector)(({ theme }) => ({
+  [`&.${stepConnectorClasses.alternativeLabel}`]: {
+    top: 9,
+    left: 'calc(-50% + 8px)',
+    right: 'calc(50% + 8px)',
+  },
+  [`& .${stepConnectorClasses.line}`]: {
+    borderColor: theme.palette.primary.main,
+    borderTopWidth: 3,
+    // boxShadow: `0px 0px 49px 10px ${theme.palette.primary.main}3b`,
+  },
+}));
+
+export const StepperExt = styled(Stepper)(() => ({
+  '& .MuiStepLabel-alternativeLabel': {
+    textAlign: 'left',
+  },
+}));
+
+export const StepLabelExt = styled(StepLabel)(({ theme }) => ({
+  '& svg': {
+    zIndex: 22,
+    color: theme.palette.primary.main,
+    width: '1.5em',
+    height: '1.5em',
+  },
+  '& .MuiStepIcon-text': {
+    fill: '#fff',
+  },
+}));
+
+export const StepperContentExt = styled(StepContent)(({ theme }) => ({
+  borderLeft: `3px solid ${theme.palette.primary.main}`,
 }));

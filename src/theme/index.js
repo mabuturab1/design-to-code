@@ -33,6 +33,9 @@ const themeOptions = createTheme({
             paddingInline: '14px',
           },
         },
+        notchedOutline: {
+          border: 'none',
+        },
       },
     },
   },

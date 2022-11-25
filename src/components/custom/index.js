@@ -1,8 +1,13 @@
 import { Box, styled } from '@mui/material';
 
 export const BodyRoot = styled('div')(({ theme }) => ({
+  // overflow: 'auto hidden',
   '& > div': {
-    marginBottom: '6rem',
+    marginBottom: '4rem',
+
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '6rem',
+    },
   },
 }));
 

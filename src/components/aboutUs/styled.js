@@ -42,7 +42,7 @@ export const WorkContent = styled(Box)(({ theme }) => ({
       textAlign: 'center',
     },
     '& .statsContent': {
-      marginTop: '2rem',
+      marginTop: '4rem',
     },
   },
 
