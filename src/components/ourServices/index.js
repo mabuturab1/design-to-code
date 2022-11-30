@@ -8,21 +8,29 @@ import { ServCardCont } from './styled';
 
 import { CardInfo } from '../../data';
 
+export const Container = styled(Box)(({ theme }) => ({
+  width: '100%',
+  height: '100%',
+  paddingBlock: '1.5rem',
+  background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
+}));
+
 const Services = () => {
   return (
-    <SectionRoot sx={{ position: 'relative' }}>
-      <SmallBackEllipse sx={{ right: 0, top: 80 }} />
-      <BackIllustration sx={{ left: 60, top: 80 }}>
-        <picture>
-          <img
-            src='/static/images/bgDots.svg'
-            height='100%'
-            width='100%'
-            alt='Landscape picture'
-          />
-        </picture>
-      </BackIllustration>
-      <Box my={4} className='dispFlexColAlgnCen'>
+    <Container className='sectionGap'>
+      <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
+        {/* <SmallBackEllipse sx={{ right: 0, top: 80 }} /> */}
+        {/* <BackIllustration sx={{ left: 60, top: 80 }}>
+          <picture>
+            <img
+              src='/static/images/bgDots.svg'
+              height='100%'
+              width='100%'
+              alt='Landscape picture'
+            />
+          </picture>
+        </BackIllustration> */}
+
         <Typography variant='h2' gutterBottom>
           Services
         </Typography>
@@ -36,13 +44,13 @@ const Services = () => {
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.
         </Typography>
-        <ServCardCont mt={15}>
+        <ServCardCont mt={8}>
           {CardInfo.map((el) => (
             <ServiceCard key={el.title} {...el} />
           ))}
         </ServCardCont>
-      </Box>
-    </SectionRoot>
+      </SectionRoot>
+    </Container>
   );
 };
 

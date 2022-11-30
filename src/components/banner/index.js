@@ -10,8 +10,8 @@ import {
 
 const Banner = () => {
   return (
-    <BackLines>
-      <SmallBackEllipse sx={{ left: 0 }} />
+    <BackLines className='sectionGap'>
+      {/* <SmallBackEllipse sx={{ left: 0 }} /> */}
       <SectionRoot sx={{ position: 'relative' }}>
         <BackIllustration sx={{ bottom: 0, right: 0 }}>
           <picture>
@@ -56,7 +56,7 @@ const Banner = () => {
               />
             </picture>
           </BannerImage>
-          <div className='imageBackDrop' />
+          {/* <div className='imageBackDrop' /> */}
         </BannerContainer>
       </SectionRoot>
     </BackLines>

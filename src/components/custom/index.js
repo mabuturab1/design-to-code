@@ -1,14 +1,14 @@
-import { Box, styled } from '@mui/material';
+import { Box, Link, styled } from '@mui/material';
+import { style } from '@mui/system';
 
 export const BodyRoot = styled('div')(({ theme }) => ({
   // overflow: 'auto hidden',
-  '& > div': {
-    marginBottom: '4rem',
-
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '6rem',
-    },
-  },
+  // '& > div': {
+  //   marginBottom: '4rem',
+  //   [theme.breakpoints.down('sm')]: {
+  //     marginBottom: '6rem',
+  //   },
+  // },
 }));
 
 export const SectionRoot = styled(Box)(({ theme }) => ({

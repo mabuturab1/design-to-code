@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Avatar, Box, Link, styled, Typography } from '@mui/material';
 
 export const FooterContainerStyle = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -56,5 +56,24 @@ export const TypoEnd = styled(Typography)(({ theme }) => ({
   marginTop: '2rem',
   [theme.breakpoints.down('1000')]: {
     textAlign: 'center',
+  },
+}));
+
+export const AvatarExt = styled(Avatar)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+
+  '&:hover': {
+    backgroundColor: theme.palette.primary.dark,
+  },
+}));
+
+export const FooterNavLink = styled(Link)(({ theme }) => ({
+  textDecoration: 'none',
+  fontSize: 19,
+  color: theme.palette.text.primary,
+  fontWeight: 500,
+
+  '&:hover': {
+    color: theme.palette.primary.main,
   },
 }));

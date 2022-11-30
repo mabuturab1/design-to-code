@@ -18,6 +18,7 @@ const GREY = {
 
 const PRIMARY = {
   main: '#29AAE3',
+  dark: '#1c769e',
 };
 
 const palette = {

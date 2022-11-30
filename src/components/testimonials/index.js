@@ -31,7 +31,7 @@ const NextBtn = (props) => {
 
 const Testimonials = () => {
   return (
-    <Box sx={{ marginBottom: '9em !important' }}>
+    <Box sx={{ marginBottom: '8em !important' }}>
       <SectionRoot
         sx={{
           width: '100vw',
@@ -41,7 +41,7 @@ const Testimonials = () => {
           position: 'relative',
         }}
       >
-        <SmallBackEllipse sx={{ left: 20, opacity: 0.1 }} />
+        {/* <SmallBackEllipse sx={{ left: 20, opacity: 0.1 }} /> */}
         <Box className='dispFlexColAlgnCen'>
           <Typography variant='h2' gutterBottom align='center'>
             What Customer Say About Us

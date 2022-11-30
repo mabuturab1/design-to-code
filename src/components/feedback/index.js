@@ -5,7 +5,7 @@ import { Feedbackform } from './feedbackform';
 
 const Feedback = () => {
   return (
-    <SectionRoot>
+    <SectionRoot className='sectionGap' id='contact-us'>
       <Box position='relative'>
         <Typography
           variant='h2'
@@ -15,7 +15,7 @@ const Feedback = () => {
           Love to hear from you. <br />
           Get in Touch
         </Typography>
-        <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
+        {/* <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
               src='/static/images/dots.svg'
@@ -24,7 +24,7 @@ const Feedback = () => {
               alt='Landscape picture'
             />
           </picture>
-        </BackIllustration>
+        </BackIllustration> */}
       </Box>
       <Typography
         variant='body1'

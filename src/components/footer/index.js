@@ -1,4 +1,4 @@
-import { Avatar, Box, styled, Typography } from '@mui/material';
+import { Avatar, Box, Link, styled, Typography } from '@mui/material';
 import React from 'react';
 import { Icon } from '@iconify/react';
 
@@ -10,8 +10,10 @@ import facebookIcon from '@iconify/icons-bxl/facebook';
 import twitterIcon from '@iconify/icons-bxl/twitter';
 import youtubeIcon from '@iconify/icons-bxl/youtube';
 import {
+  AvatarExt,
   CompInfoCont,
   FooterContainerStyle,
+  FooterNavLink,
   LinkContent,
   TypoEnd,
 } from './styled';
@@ -26,84 +28,69 @@ export const Footer = () => {
       <Box pb={7}>
         <FooterContainerStyle>
           <CompInfoCont sx={{ gap: '1.5rem', flex: 1 }}>
-            <Logo />
+            <Logo sx={{ maxWidth: 200 }} />
             <Typography variant='body1' color='textSecondary'>
               Lörem ipsum aras beskade nede plakar. Sad monorade. Söven fade
               negon. Samösat neras pykäs. Preligt anas egoliga. Astrovis låvis
               revis an.
             </Typography>
             <Box display='flex' gap='1rem'>
-              <Avatar sx={{ backgroundColor: 'primary.main' }}>
-                {getIcon(facebookIcon)}
-              </Avatar>
-              <Avatar sx={{ backgroundColor: 'primary.main' }}>
-                {getIcon(twitterIcon)}
-              </Avatar>
-              <Avatar sx={{ backgroundColor: 'primary.main' }}>
-                {getIcon(youtubeIcon)}
-              </Avatar>
-              <Avatar sx={{ backgroundColor: 'primary.main' }}>
-                {getIcon(dribbbleIcon)}
-              </Avatar>
+              <Link href='#'>
+                <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
+                  {getIcon(facebookIcon)}
+                </AvatarExt>
+              </Link>
+              <Link href='#'>
+                <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
+                  {getIcon(twitterIcon)}
+                </AvatarExt>
+              </Link>
+              <Link href='#'>
+                <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
+                  {getIcon(youtubeIcon)}
+                </AvatarExt>
+              </Link>
+              <Link href='#'>
+                <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
+                  {getIcon(dribbbleIcon)}
+                </AvatarExt>
+              </Link>
             </Box>
           </CompInfoCont>
           <LinkContent>
             <Box>
-              <Typography variant='subtitle1' mb={1}>
+              <Typography variant='subtitle1' mb={1} fontWeight={700}>
                 Quick Links
               </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                About
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Pricing
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Blog
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Contact Us
-              </Typography>
+              <FooterNavLink href='/about-us'>About Us</FooterNavLink>
+              <FooterNavLink href='#'>Pricing</FooterNavLink>
+              <FooterNavLink href='#'>Blog</FooterNavLink>
+              <FooterNavLink href='#'>Contact Us</FooterNavLink>
             </Box>
             <Box sx={{ alignItems: 'flex-start' }}>
-              <Typography variant='subtitle1' mb={1}>
+              <Typography variant='subtitle1' mb={1} fontWeight={700}>
                 Others
               </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Why ConovoTech?
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                How it works
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                FAQ
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Affiliates
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                How to get More Sales
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Customer Support
-              </Typography>
+              <FooterNavLink href='#'>Why ConovoTech?</FooterNavLink>
+              <FooterNavLink href='#'>How it works</FooterNavLink>
+              <FooterNavLink href='#'>FAQ</FooterNavLink>
+              <FooterNavLink href='#'>Affiliates</FooterNavLink>
+              <FooterNavLink href='#'>How to get More Sales</FooterNavLink>
+              <FooterNavLink href='#'>Customer Support</FooterNavLink>
             </Box>
             <Box>
-              <Typography variant='body1' mb={1} sx={{ visibility: 'hidden' }}>
+              <Typography
+                variant='body1'
+                mb={1}
+                fontWeight={700}
+                sx={{ visibility: 'hidden' }}
+              >
                 Company Policies
               </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Privacy Policy
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Terms and Conditions
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Cookie Policy
-              </Typography>
-              <Typography variant='body1' color='textSecondary'>
-                Language
-              </Typography>
+              <FooterNavLink href='#'>Privacy Policy</FooterNavLink>
+              <FooterNavLink href='#'>Terms and Conditions</FooterNavLink>
+              <FooterNavLink href='#'>Cookie Policy</FooterNavLink>
+              <FooterNavLink href='#'>Language</FooterNavLink>
             </Box>
           </LinkContent>
         </FooterContainerStyle>

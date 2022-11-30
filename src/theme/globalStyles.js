@@ -27,7 +27,9 @@ export default function GlobalStyles() {
           width: '100%',
           height: '100%',
           backgroundColor: '#fff',
-          overflow: 'auto',
+          overflowY: 'auto',
+          scrollBehavior: 'smooth',
+          overflowX: 'hidden',
         },
         input: {
           '&[type=number]': {
@@ -56,7 +58,10 @@ export default function GlobalStyles() {
           flexDirection: 'column',
           alignItems: 'center',
         },
-
+        a: {
+          cursor: 'pointer',
+          textDecoration: 'none',
+        },
         '.sectionMaxWid': {
           maxWidth: '35rem',
         },

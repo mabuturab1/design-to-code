@@ -56,9 +56,10 @@ const AvatarCont = ({ children }) => {
 const Technologies = () => {
   return (
     <Box
+      className='sectionGap'
       sx={{
         backgroundColor: 'background.neutral',
-        paddingTop: '4rem',
+        paddingTop: '2rem',
         overflow: 'hidden',
       }}
     >
@@ -76,7 +77,7 @@ const Technologies = () => {
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.
         </Typography>
-        <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
+        {/* <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
               height='100%'
@@ -85,7 +86,7 @@ const Technologies = () => {
               alt='Landscape picture'
             />
           </picture>
-        </BackIllustration>
+        </BackIllustration> */}
         <TechIonsCont>
           <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
           <AvatarCont>{avatars_2(androidIcon, postmanIcon)}</AvatarCont>

@@ -1,4 +1,4 @@
-import { Box, Grid, styled } from '@mui/material';
+import { alpha, Box, Grid, styled } from '@mui/material';
 import Slider from 'react-slick';
 
 export const ArrowStyled = styled('div')(({ theme }) => ({
@@ -13,6 +13,8 @@ export const ArrowStyled = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    boxShadow:
+      'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
   },
 
   '&.slick-prev:before, &.slick-next:before': {
@@ -31,14 +33,23 @@ export const ArrowStyled = styled('div')(({ theme }) => ({
   '&.slick-prev': {
     left: '50%',
     top: '110%',
-    transform: 'translateX(-64px)',
+    transform: 'translateX(-60px)',
   },
   '&.slick-next': {
     right: '50%',
     top: '110%',
-    transform: 'translateX(64px)',
+    transform: 'translateX(60px)',
   },
   // },
+
+  '&.slick-prev:hover, &.slick-next:hover': {
+    backgroundColor: alpha(theme.palette.primary.main, 0.85),
+    color: '#fff',
+    // boxShadow: `${alpha(theme.palette.primary.main, 0.2)} 0px 7px 29px 0px`,
+    boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+
+    backgroundColor: theme.palette.primary.dark,
+  },
 
   // [theme.breakpoints.up('xs')]: {
   //   '&.slick-prev': {

@@ -27,8 +27,11 @@ import HorizontalStepper from './HorizontalTimeline';
 
 const Process = () => {
   return (
-    <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
-      <SmallBackEllipse sx={{ left: 0 }} />
+    <SectionRoot
+      className='dispFlexColAlgnCen sectionGap'
+      sx={{ position: 'relative' }}
+    >
+      {/* <SmallBackEllipse sx={{ left: 0 }} /> */}
       <Typography variant='h3' gutterBottom>
         Our Process
       </Typography>
@@ -41,7 +44,7 @@ const Process = () => {
         Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
         emedan semis. Härat rär par.
       </Typography>
-      <Box position='relative'>
+      {/* <Box position='relative' mt={6}>
         <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
@@ -52,7 +55,7 @@ const Process = () => {
             />
           </picture>
         </BackIllustration>
-      </Box>
+      </Box> */}
       <HorizontalStepper />
 
       {/* <MHidden type='down' value='md'>

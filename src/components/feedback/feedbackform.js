@@ -7,13 +7,39 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { CustomFormControl, GridExt } from './styled';
 
+const interestSubj = [
+  { value: 'wd', label: 'Web Development' },
+  { value: 'apd', label: 'Android App Development' },
+  { value: 'wid', label: 'Windows App Development' },
+];
+
+const userBudget = [
+  { value: 11, label: '$10 - $100' },
+  { value: 12, label: '$100 - $500' },
+  { value: 13, label: '$500 - $1000' },
+  { value: 14, label: '$1000 - $1500' },
+  { value: 15, label: '$1500 - $2000' },
+];
+
 export const Feedbackform = () => {
-  const handleSubmit = () => {
-    console.log('Form Submitted');
+  const defaultState = {
+    interest: interestSubj[0].value,
+    budget: userBudget[0].value,
   };
+
+  // const [interest, setInterest] = useState(interestSubj[0].value);
+  // const [budget, setBudget] = useState(userBudget[0].value);
+  const [state, setState] = useState({ ...defaultState });
+
+  const handleSubmit = () => {};
+
+  const handleChange = (e) => {
+    setState((st) => ({ ...st, [e.target.name]: e.target.value }));
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <GridExt container spacing={5} mt={6}>
@@ -50,13 +76,14 @@ export const Feedbackform = () => {
             <FormControl fullWidth>
               <Select
                 name='interest'
-                value='wd'
-                // label='Age'
-                // onChange={handleChange}
+                value={state.interest}
+                onChange={handleChange}
               >
-                <MenuItem value='wd'>Web Development</MenuItem>
-                <MenuItem value='apd'>Android App Development</MenuItem>
-                <MenuItem value='wad'>Windows App Development</MenuItem>
+                {interestSubj.map((el) => (
+                  <MenuItem key={el.value} value={el.value}>
+                    {el.label}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </CustomFormControl>
@@ -65,10 +92,19 @@ export const Feedbackform = () => {
           <CustomFormControl>
             <Typography variant='subtitle1'>Your budget?</Typography>
             <FormControl fullWidth>
-              <Select name='budget' value={0}>
-                <MenuItem value={0}>$500 - $1000</MenuItem>
-                <MenuItem value={1}>$1000 - $1500</MenuItem>
-                <MenuItem value={2}>$5000 - $2000</MenuItem>
+              <Select
+                name='budget'
+                data-type='budget'
+                value={state.budget}
+                onChange={handleChange}
+              >
+                {userBudget.map((el) => (
+                  <MenuItem key={el.value} value={el.value}>
+                    {el.label}
+                  </MenuItem>
+                ))}
+                {/* <MenuItem value={1}>$1000 - $1500</MenuItem>
+                <MenuItem value={2}>$5000 - $2000</MenuItem> */}
               </Select>
             </FormControl>
           </CustomFormControl>

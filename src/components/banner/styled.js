@@ -6,6 +6,7 @@ export const BackLines = styled('div')(({ theme }) => ({
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   position: 'relative',
+  marginTop: '2.5rem',
 }));
 
 export const BannerContainer = styled('section')(({ theme }) => ({

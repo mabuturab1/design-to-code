@@ -11,18 +11,17 @@ import { Work } from '../../data';
 
 const RecentWork = () => {
   return (
-    <RootStyle>
-      <RecWorkContainer pt={9}>
+    <RootStyle id='portfolio' className='sectionGap'>
+      <RecWorkContainer pt={5}>
         <SectionRoot
+          className='dispFlexColAlgnCen'
           sx={{
             width: '100vw',
-            display: 'flex',
-            flexDirection: 'column',
             gap: '4rem',
-            position: 'relative',
+            // position: 'relative',
           }}
         >
-          <SmallBackEllipse sx={{ right: 20, opacity: 0.3 }} />
+          {/* <SmallBackEllipse sx={{ right: 20, opacity: 0.3 }} /> */}
           <Box className='dispFlexColAlgnCen'>
             <Typography variant='h2' gutterBottom>
               Recent Work
@@ -39,7 +38,7 @@ const RecentWork = () => {
             </Typography>
           </Box>
           <CardContainer>
-            {Work.map((el, i) => (
+            {Work.slice(0, 3).map((el, i) => (
               <WorkCard key={`${i}-${el.title}`} {...el} />
             ))}
           </CardContainer>
@@ -48,7 +47,7 @@ const RecentWork = () => {
               See More Work
             </Button>
           </Box>
-          <Box width='100vw' position='relative'>
+          {/* <Box width='100vw' position='relative'>
             <BackIllustration sx={{ bottom: 20, left: 'calc(100vw-15px)' }}>
               <picture>
                 <img
@@ -59,7 +58,7 @@ const RecentWork = () => {
                 />
               </picture>
             </BackIllustration>
-          </Box>
+          </Box> */}
         </SectionRoot>
       </RecWorkContainer>
     </RootStyle>

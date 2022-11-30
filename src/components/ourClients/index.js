@@ -5,19 +5,26 @@ import { SectionRoot } from '../custom';
 const Container = styled('div')(({ theme }) => ({
   display: 'flex',
   flexWrap: 'wrap',
-  gap: '2.25rem',
+  gap: '1.5rem',
   justifyContent: 'center',
 
-  '& svg': {
-    maxWidth: 45,
+  '& .logoBox': {
+    border: `2px solid #000`,
+    padding: '1rem',
+    borderRadius: 10,
+    objectFit: 'contain',
+
+    '& img': {
+      maxWidth: 125,
+    },
   },
 }));
 
 const Clients = () => {
   return (
-    <SectionRoot>
+    <SectionRoot className='sectionGap'>
       <Container>
-        <Box>
+        <div className='logoBox'>
           <picture>
             <img
               height='100%'
@@ -26,8 +33,8 @@ const Clients = () => {
               alt='Landscape picture'
             />
           </picture>
-        </Box>
-        <Box>
+        </div>
+        <div className='logoBox'>
           <picture>
             <img
               height='100%'
@@ -36,8 +43,8 @@ const Clients = () => {
               alt='Landscape picture'
             />
           </picture>
-        </Box>
-        <Box>
+        </div>
+        <div className='logoBox'>
           <picture>
             <img
               height='100%'
@@ -46,8 +53,8 @@ const Clients = () => {
               alt='Landscape picture'
             />
           </picture>
-        </Box>
-        <Box>
+        </div>
+        <div className='logoBox'>
           <picture>
             <img
               height='100%'
@@ -56,8 +63,8 @@ const Clients = () => {
               alt='Landscape picture'
             />
           </picture>
-        </Box>
-        <Box>
+        </div>
+        <div className='logoBox'>
           <picture>
             <img
               height='100%'
@@ -66,7 +73,7 @@ const Clients = () => {
               alt='Landscape picture'
             />
           </picture>
-        </Box>
+        </div>
       </Container>
     </SectionRoot>
   );

@@ -32,7 +32,7 @@ const steps = [
 const HorizontalStepper = () => {
   const renderContent = <React.Fragment></React.Fragment>;
   return (
-    <Box mt={4} sx={{ width: '100%', overflow: 'hidden' }}>
+    <Box mt={8} sx={{ width: '100%', overflow: 'hidden' }}>
       <MHidden type='down' value='md'>
         <StepperExt
           alternativeLabel
