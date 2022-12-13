@@ -2,19 +2,16 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { BackIllustration, SectionRoot } from '../custom';
 import { Feedbackform } from './feedbackform';
+import { TypographyExt } from './styled';
 
 const Feedback = () => {
   return (
     <SectionRoot className='sectionGap' id='contact-us'>
       <Box position='relative'>
-        <Typography
-          variant='h2'
-          gutterBottom
-          sx={{ textAlign: { sm: 'center', md: 'left' } }}
-        >
+        <TypographyExt variant='h2' gutterBottom>
           Love to hear from you. <br />
           Get in Touch
-        </Typography>
+        </TypographyExt>
         {/* <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
           <picture>
             <img
@@ -26,14 +23,10 @@ const Feedback = () => {
           </picture>
         </BackIllustration> */}
       </Box>
-      <Typography
-        variant='body1'
-        color='textSecondary'
-        sx={{ textAlign: { sm: 'center', md: 'left' } }}
-      >
+      <TypographyExt variant='body1' color='textSecondary'>
         Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
         emedan semis. Härat rär par.
-      </Typography>
+      </TypographyExt>
 
       <Feedbackform />
     </SectionRoot>

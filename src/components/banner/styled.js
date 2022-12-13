@@ -48,4 +48,11 @@ export const HeaderTextContent = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   flexWrap: 'nowrap',
   gap: '2rem',
+
+  [theme.breakpoints.down('sm')]: {
+    textAlign: 'center',
+  },
+  [theme.breakpoints.up('dm')]: {
+    textAlign: 'start',
+  },
 }));

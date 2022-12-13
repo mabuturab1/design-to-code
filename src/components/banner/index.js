@@ -24,9 +24,7 @@ const Banner = () => {
           </picture>
         </BackIllustration>
         <BannerContainer>
-          <HeaderTextContent
-            sx={{ textAlign: { xs: 'center', sm: 'center', md: 'start' } }}
-          >
+          <HeaderTextContent>
             <Typography variant='h2'>
               Get your Website Build Effortlessly
             </Typography>
