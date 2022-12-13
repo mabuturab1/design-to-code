@@ -6,7 +6,7 @@ const TestimonialCard = (props) => {
   const { message, userImg, username } = props;
   return (
     <TestimonialCardRoot className='card'>
-      <Box display='flex' flexWrap='nowrap' gap={3}>
+      <Box className='cardIntro' display='flex' flexWrap='nowrap' gap={3}>
         <Avatar src={userImg} alt='userImg' sx={{ width: 40, height: 40 }} />
         <Box>
           <Typography variant='h5'>{username}</Typography>

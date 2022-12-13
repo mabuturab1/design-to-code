@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,15 +13,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Logo } from '../Logo';
-import { Link } from '@mui/material';
-import { NavbarList, NavBarRoot, NavLink } from './styled';
+import { Dialog, Divider, Drawer, Link, List, ListItem } from '@mui/material';
+import { NavbarList, NavBarRoot, NavDrawerList, NavLink } from './styled';
+import { MHidden } from '../custom/MHidden';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 // const navItems = ['Portfolio', 'About Us', 'Blog', 'Contact Us'];
 
 const navItems = [
   {
     label: 'Portfolio',
-    url: '#portfolio',
+    url: '/#portfolio',
   },
   {
     label: 'About Us',
@@ -33,68 +35,97 @@ const navItems = [
   },
   {
     label: 'Contact Us',
-    url: '#contact-us',
+    url: '/#contact-us',
   },
 ];
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [open, setOpen] = useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const toggleSideBar = () => {
+    setOpen((prev) => !prev);
   };
 
   return (
-    <AppBar
-      position='sticky'
-      color='inherit'
-      sx={{
-        boxShadow: '0 0 3px 1px #0003',
-      }}
-    >
-      <Container maxWidth='lg'>
-        <Toolbar disableGutters>
-          <NavBarRoot>
-            <Logo sx={{ maxWidth: 175 }} />
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-              <IconButton
-                size='small'
-                aria-label='account of current user'
-                aria-controls='menu-appbar'
-                aria-haspopup='true'
-                onClick={handleOpenNavMenu}
-                color='inherit'
-              >
-                <MenuIcon />
-              </IconButton>
-            </Box>
-            <NavbarList>
-              {navItems.map((navItem) => (
-                <NavLink
-                  href={navItem.url}
-                  key={navItem.label}
-
-                  // sx={{ my: 2, color: 'white', display: 'block' }}
+    <React.Fragment>
+      <AppBar
+        position='sticky'
+        color='inherit'
+        sx={{
+          boxShadow: '0 0 3px 1px #0003',
+        }}
+      >
+        <Container maxWidth='lg'>
+          <Toolbar disableGutters>
+            <NavBarRoot>
+              <Logo sx={{ maxWidth: 175 }} />
+              <MHidden type='up' value='sm'>
+                <IconButton
+                  size='small'
+                  aria-label='drawer-menu'
+                  aria-controls='menu-appbar'
+                  aria-haspopup='true'
+                  onClick={toggleSideBar}
+                  color='inherit'
                 >
-                  {navItem.label}
-                </NavLink>
-              ))}
-            </NavbarList>
-          </NavBarRoot>
-        </Toolbar>
-      </Container>
-    </AppBar>
+                  <MenuIcon />
+                </IconButton>
+              </MHidden>
+              <MHidden type='down' value='sm'>
+                <NavbarList>
+                  {navItems.map((navItem) => (
+                    <NavLink href={navItem.url} key={navItem.label}>
+                      {navItem.label}
+                    </NavLink>
+                  ))}
+                </NavbarList>
+              </MHidden>
+            </NavBarRoot>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Drawer
+        anchor='left'
+        onClose={toggleSideBar}
+        open={open}
+        sx={{
+          width: 230,
+          flexShrink: 0,
+        }}
+      >
+        <Box
+          p={2}
+          display='flex'
+          alignItems='center'
+          justifyContent='space-between'
+          gap={3}
+        >
+          <Logo sx={{ maxWidth: 150 }} />
+          <IconButton onClick={toggleSideBar} size='small'>
+            <ArrowBackIosNewIcon fontSize='small' />
+          </IconButton>
+        </Box>
+        <Box sx={{ backgroundColor: '#fff' }}>
+          <Divider />
+        </Box>
+
+        <Box mt={4} />
+
+        <NavDrawerList>
+          {navItems.map((navItem) => (
+            <NavLink
+              href={navItem.url}
+              key={navItem.label}
+              onClick={toggleSideBar}
+            >
+              <ListItem button>
+                <Typography variant='subtitle1'>{navItem.label}</Typography>
+              </ListItem>
+            </NavLink>
+          ))}
+        </NavDrawerList>
+      </Drawer>
+    </React.Fragment>
   );
 }
 export default NavBar;

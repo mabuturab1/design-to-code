@@ -1,36 +1,64 @@
-import { styled, Typography, Box, IconButton, Link } from '@mui/material';
-import React from 'react';
+import * as React from 'react';
+// import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
-import { Logo } from '../Logo';
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
 
-import { LinkExt, SectionRoot } from '../custom';
-import { MHidden } from '../custom/MHidden';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import { NavbarList, NavBarRoot } from './styled';
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
 
-export const NavBar = () => {
+// ElevationScroll.propTypes = {
+//   children: PropTypes.element.isRequired,
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window: PropTypes.func,
+// };
+
+export default function ElevateAppBar(props) {
   return (
-    <SectionRoot>
-      <NavBarRoot>
-        <Logo />
-        <MHidden type='down' value='md'>
-          <NavbarList>
-            <LinkExt href='#portfolio'>
-              <Typography variant='subtitle2' color='text.primary'>
-                Portfolio
-              </Typography>
-            </LinkExt>
-            <Typography variant='subtitle2'>About Us</Typography>
-            <Typography variant='subtitle2'>Blog</Typography>
-            <Typography variant='subtitle2'>Contact Us</Typography>
-          </NavbarList>
-        </MHidden>
-        <MHidden type='up' value='md'>
-          <IconButton>
-            <MenuOpenIcon />
-          </IconButton>
-        </MHidden>
-      </NavBarRoot>
-    </SectionRoot>
+    <React.Fragment>
+      <CssBaseline />
+      <ElevationScroll {...props}>
+        <AppBar>
+          <Toolbar>
+            <Typography variant='h6' component='div'>
+              Scroll to elevate App bar
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+      <Toolbar />
+      <Container>
+        <Box sx={{ my: 2 }}>
+          {[...new Array(12)]
+            .map(
+              () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
+            )
+            .join('\n')}
+        </Box>
+      </Container>
+    </React.Fragment>
   );
-};
+}

@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 
 export const ArrowStyled = styled('div')(({ theme }) => ({
   '&.slick-arrow': {
-    // boxShadow: '0px 14px 14px rgba(0, 0, 0, 0.1)',
     backgroundColor: theme.palette.primary.main,
     color: '#fff',
     borderRadius: '50%',
@@ -21,15 +20,6 @@ export const ArrowStyled = styled('div')(({ theme }) => ({
     display: 'none',
   },
 
-  // '&.slick-prev': {
-  //   left: 18,
-  //   top: '50%',
-  // },
-  // '&.slick-next': {
-  //   right: 18,
-  //   top: '50%',
-  // },
-  // [theme.breakpoints.down('700')]: {
   '&.slick-prev': {
     left: '50%',
     top: '110%',
@@ -40,25 +30,13 @@ export const ArrowStyled = styled('div')(({ theme }) => ({
     top: '110%',
     transform: 'translateX(60px)',
   },
-  // },
 
   '&.slick-prev:hover, &.slick-next:hover': {
     backgroundColor: alpha(theme.palette.primary.main, 0.85),
     color: '#fff',
-    // boxShadow: `${alpha(theme.palette.primary.main, 0.2)} 0px 7px 29px 0px`,
     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
-
     backgroundColor: theme.palette.primary.dark,
   },
-
-  // [theme.breakpoints.up('xs')]: {
-  //   '&.slick-prev': {
-  //     left: 10,
-  //   },
-  //   '&.slick-next': {
-  //     right: 10,
-  //   },
-  // },
 }));
 
 export const Illustration = styled(Box)(({ theme }) => ({
@@ -117,10 +95,15 @@ export const TestimonialCardRoot = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.neutral,
   borderRadius: 10,
   padding: '1.5rem',
-  // maxWidth: 400,
-  // '&:not(:last-of-type)': {
-  //   marginRight: '2rem !important',
-  // },
+
+  [theme.breakpoints.down('700')]: {
+    textAlign: 'center',
+    '& .cardIntro': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '1rem',
+    },
+  },
 }));
 
 export const SliderRoot = styled(Slider)(({ theme }) => ({

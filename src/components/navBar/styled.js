@@ -1,4 +1,4 @@
-import { Box, Link, styled } from '@mui/material';
+import { Box, Link, List, styled } from '@mui/material';
 
 export const NavBarRoot = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -33,5 +33,20 @@ export const NavLink = styled(Link)(({ theme }) => ({
 
   '&:hover': {
     color: theme.palette.primary.main,
+  },
+}));
+
+export const NavDrawerList = styled(List)(({ theme }) => ({
+  '& a': {
+    color: theme.palette.text.primary,
+    textDecoration: 'none',
+
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+
+    '& .MuiListItem-root': {
+      columnGap: '1.4em',
+    },
   },
 }));

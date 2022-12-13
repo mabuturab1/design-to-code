@@ -78,7 +78,6 @@ const HorizontalStepper = () => {
               </Typography>
             </StepLabel>
             <StepperConnectorHorExt
-              id='last'
               sx={{ left: 'calc(50% + 8px)', right: 'calc(0% + 8px)' }}
             >
               <span />
