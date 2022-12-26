@@ -1,5 +1,6 @@
 import { Box, styled } from '@mui/material';
 import React from 'react';
+import { motion } from 'framer-motion';
 import { SectionRoot } from '../custom';
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -32,7 +33,14 @@ const Clients = () => {
     <RootStyle>
       <SectionRoot className='sectionGap' sx={{ marginBottom: '0' }}>
         <Container>
-          <div className='logoBox'>
+          <motion.div
+            className='logoBox'
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeOut',
+            }}
+          >
             <picture>
               <img
                 height='100%'
@@ -41,8 +49,16 @@ const Clients = () => {
                 alt='Landscape picture'
               />
             </picture>
-          </div>
-          <div className='logoBox'>
+          </motion.div>
+          <motion.div
+            className='logoBox'
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeOut',
+              delay: 0.25,
+            }}
+          >
             <picture>
               <img
                 height='100%'
@@ -51,8 +67,16 @@ const Clients = () => {
                 alt='Landscape picture'
               />
             </picture>
-          </div>
-          <div className='logoBox'>
+          </motion.div>
+          <motion.div
+            className='logoBox'
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeOut',
+              delay: 0.5,
+            }}
+          >
             <picture>
               <img
                 height='100%'
@@ -61,8 +85,16 @@ const Clients = () => {
                 alt='Landscape picture'
               />
             </picture>
-          </div>
-          <div className='logoBox'>
+          </motion.div>
+          <motion.div
+            className='logoBox'
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeOut',
+              delay: 0.75,
+            }}
+          >
             <picture>
               <img
                 height='100%'
@@ -71,8 +103,16 @@ const Clients = () => {
                 alt='Landscape picture'
               />
             </picture>
-          </div>
-          <div className='logoBox'>
+          </motion.div>
+          <motion.div
+            className='logoBox'
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeOut',
+              delay: 1,
+            }}
+          >
             <picture>
               <img
                 height='100%'
@@ -81,7 +121,7 @@ const Clients = () => {
                 alt='Landscape picture'
               />
             </picture>
-          </div>
+          </motion.div>
         </Container>
       </SectionRoot>
     </RootStyle>

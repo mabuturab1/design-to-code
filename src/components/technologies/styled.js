@@ -1,6 +1,7 @@
 import { Box, styled } from '@mui/material';
+import { motion } from 'framer-motion';
 
-export const TechIonsCont = styled(Box)(({ theme }) => ({
+export const TechIonsCont = styled(motion.div)(({ theme }) => ({
   display: 'flex',
   flexWrap: 'no-wrap',
   justifyContent: 'center',

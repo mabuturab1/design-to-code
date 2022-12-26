@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import { Stepper, StepperContext, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+
 import {
   QontoConnector,
   QontoStepIconRoot,
@@ -47,35 +49,59 @@ const HorizontalStepper = () => {
               <span />
             </StepperConnectorHorExt>
             <StepLabel StepIconComponent={QontoStepIcon}>
-              <TypoExt sx={{ fontSize: '10rem' }}>1</TypoExt>
-              <Typography variant='h4'>Project Discovery Call</Typography>
-              <Typography variant='body1'>
-                Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
-                potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
-                bera i dibäs och anat. Vivyng dissa
-              </Typography>
+              <motion.div
+                whileInView={{ y: [200, 0], x: [0, 0], opacity: [0, 1] }}
+                transition={{
+                  duration: 1.25,
+                  ease: 'easeOut',
+                }}
+              >
+                <TypoExt sx={{ fontSize: '10rem' }}>1</TypoExt>
+                <Typography variant='h4'>Project Discovery Call</Typography>
+                <Typography variant='body1'>
+                  Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
+                  potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
+                  bera i dibäs och anat. Vivyng dissa
+                </Typography>
+              </motion.div>
             </StepLabel>
           </Step>
           <Step>
             <StepLabel StepIconComponent={QontoStepIcon}>
-              <TypoExt sx={{ fontSize: '10rem' }}>2</TypoExt>
-              <Typography variant='h4'>Project Discovery Call</Typography>
-              <Typography variant='body1'>
-                Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
-                potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
-                bera i dibäs och anat. Vivyng dissa
-              </Typography>
+              <motion.div
+                whileInView={{ y: [-200, 0], x: [0, 0], opacity: [0, 1] }}
+                transition={{
+                  duration: 1.25,
+                  ease: 'easeOut',
+                }}
+              >
+                <TypoExt sx={{ fontSize: '10rem' }}>2</TypoExt>
+                <Typography variant='h4'>Project Discovery Call</Typography>
+                <Typography variant='body1'>
+                  Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
+                  potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
+                  bera i dibäs och anat. Vivyng dissa
+                </Typography>
+              </motion.div>
             </StepLabel>
           </Step>
           <Step>
             <StepLabel StepIconComponent={QontoStepIcon}>
-              <TypoExt sx={{ fontSize: '10rem' }}>3</TypoExt>
-              <Typography variant='h4'>Project Discovery Call</Typography>
-              <Typography variant='body1'>
-                Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
-                potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
-                bera i dibäs och anat. Vivyng dissa
-              </Typography>
+              <motion.div
+                whileInView={{ y: [200, 0], x: [0, 0], opacity: [0, 1] }}
+                transition={{
+                  duration: 1.25,
+                  ease: 'easeOut',
+                }}
+              >
+                <TypoExt sx={{ fontSize: '10rem' }}>3</TypoExt>
+                <Typography variant='h4'>Project Discovery Call</Typography>
+                <Typography variant='body1'>
+                  Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
+                  potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror
+                  bera i dibäs och anat. Vivyng dissa
+                </Typography>
+              </motion.div>
             </StepLabel>
             <StepperConnectorHorExt
               sx={{ left: 'calc(50% + 8px)', right: 'calc(0% + 8px)' }}

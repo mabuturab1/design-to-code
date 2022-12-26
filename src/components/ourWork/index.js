@@ -1,6 +1,7 @@
 import { Box, Button, styled, Typography } from '@mui/material';
 import React from 'react';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 import WorkCard from './workCard';
 import { BackIllustration, SectionRoot, SmallBackEllipse } from '../custom';
@@ -37,16 +38,34 @@ const RecentWork = () => {
               josm, emedan semis. Härat rär par.
             </Typography>
           </Box>
-          <CardContainer>
+          <CardContainer
+            whileInView={{
+              y: [150, 0],
+              x: [0, 0],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeInOut',
+            }}
+          >
             {Work.slice(0, 3).map((el, i) => (
               <WorkCard key={`${i}-${el.title}`} {...el} />
             ))}
           </CardContainer>
-          <Box textAlign='center'>
+          <motion.div
+            // textAlign='center'
+            whileInView={{ y: [-80, 0], x: [0, 0], opacity: [0, 1] }}
+            transition={{
+              duration: 1,
+              ease: 'easeOut',
+              delay: 0.5,
+            }}
+          >
             <Button variant='contained' color='primary'>
               See More Work
             </Button>
-          </Box>
+          </motion.div>
           {/* <Box width='100vw' position='relative'>
             <BackIllustration sx={{ bottom: 20, left: 'calc(100vw-15px)' }}>
               <picture>

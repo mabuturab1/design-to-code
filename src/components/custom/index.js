@@ -1,5 +1,6 @@
 import { Box, Link, styled } from '@mui/material';
 import { style } from '@mui/system';
+import { motion } from 'framer-motion';
 
 export const BodyRoot = styled('div')(({ theme }) => ({
   // overflow: 'auto hidden',
@@ -19,7 +20,7 @@ export const SectionRoot = styled(Box)(({ theme }) => ({
   marginInline: 'auto',
 }));
 
-export const BackIllustration = styled(Box)(({ theme }) => ({
+export const BackIllustration = styled('div')(({ theme }) => ({
   position: 'absolute',
   [theme.breakpoints.down('md')]: {
     display: 'none',
@@ -34,4 +35,13 @@ export const SmallBackEllipse = styled(Box)(({ theme }) => ({
   filter: 'blur(40px)',
   position: 'absolute',
   // top: 0,
+}));
+
+export const LinkExt = styled(Link)(({ theme }) => ({
+  textDecoration: 'none',
+  cursor: 'pointer',
+
+  '&:hover': {
+    color: theme.palette.primary.main,
+  },
 }));

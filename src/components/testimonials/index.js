@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import TestimonialCard from './testimonialCard';
 import { SectionRoot, SmallBackEllipse } from '../custom';
@@ -65,7 +66,16 @@ const Testimonials = () => {
         >
           {testimonialList.map((el, i) => (
             <Box key={`${el.username}-${i + 1}`} sx={{ padding: '10px' }}>
-              <TestimonialCard {...el} />
+              <motion.div
+                whileInView={{ y: [50, 0], x: [0, 0], opacity: [0, 1] }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeOut',
+                  delay: 0.5,
+                }}
+              >
+                <TestimonialCard {...el} />
+              </motion.div>
             </Box>
           ))}
         </SliderRoot>

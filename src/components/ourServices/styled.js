@@ -1,6 +1,8 @@
 import { Box, Card, styled } from '@mui/material';
+import { motion } from 'framer-motion';
 
-export const ServCardCont = styled(Box)(({ theme }) => ({
+export const ServCardCont = styled(motion.div)(({ theme }) => ({
+  marginTop: '4rem',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -17,6 +19,11 @@ export const ServCardCont = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     gap: '2rem',
+  },
+
+  '& > *': {
+    flex: 1,
+    height: '100%',
   },
 
   // '& > div:nth-of-type(2)': {

@@ -13,10 +13,21 @@ import {
   AvatarExt,
   CompInfoCont,
   FooterContainerStyle,
-  FooterNavLink,
+  FooterLink,
+  FooterRightsSec,
+  FooterRightsSecWrapper,
   LinkContent,
   TypoEnd,
 } from './styled';
+import {
+  ABOUT_LINK,
+  BLOGS_LINK,
+  CONTACTUS_LINK,
+  FAQ_LINK,
+  PORTFOLIO_LINK,
+  PRIVACY_POLICY_LINK,
+  TERMS_LINK,
+} from '../../utils/links';
 
 const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
@@ -31,8 +42,8 @@ export const Footer = () => {
       }}
     >
       <SectionRoot>
-        <Box pb={6}>
-          <FooterContainerStyle>
+        <Box>
+          <FooterContainerStyle mb={3}>
             <CompInfoCont sx={{ gap: '1.5rem', flex: 1 }}>
               <Logo sx={{ maxWidth: 200 }} />
               <Typography variant='body1' color='textSecondary'>
@@ -68,39 +79,108 @@ export const Footer = () => {
                 <Typography variant='subtitle1' mb={1} fontWeight={700}>
                   Quick Links
                 </Typography>
-                <FooterNavLink href='/about-us'>About Us</FooterNavLink>
-                <FooterNavLink href='#'>Pricing</FooterNavLink>
-                <FooterNavLink href='#'>Blog</FooterNavLink>
-                <FooterNavLink href='/#contact-us'>Contact Us</FooterNavLink>
+                <FooterLink
+                  variant='body1'
+                  color='text.secondary'
+                  href={PORTFOLIO_LINK}
+                >
+                  Portfolio
+                </FooterLink>
+                <FooterLink
+                  variant='body1'
+                  color='text.secondary'
+                  href={ABOUT_LINK}
+                >
+                  About Us
+                </FooterLink>
+                <FooterLink
+                  variant='body1'
+                  color='text.secondary'
+                  href={BLOGS_LINK}
+                >
+                  Blog
+                </FooterLink>
+                <FooterLink
+                  variant='body1'
+                  color='text.secondary'
+                  href={CONTACTUS_LINK}
+                >
+                  Contact Us
+                </FooterLink>
               </Box>
               <Box sx={{ alignItems: 'flex-start' }}>
                 <Typography variant='subtitle1' mb={1} fontWeight={700}>
-                  Others
+                  Services
                 </Typography>
-                <FooterNavLink href='#'>Why ConovoTech?</FooterNavLink>
-                <FooterNavLink href='#'>How it works</FooterNavLink>
-                <FooterNavLink href='#'>FAQ</FooterNavLink>
-                <FooterNavLink href='#'>Affiliates</FooterNavLink>
-                <FooterNavLink href='#'>How to get More Sales</FooterNavLink>
-                <FooterNavLink href='#'>Customer Support</FooterNavLink>
-              </Box>
-              <Box>
-                <Typography
+                <FooterLink variant='body1' color='text.secondary' href='#'>
+                  Why ConovoTech?
+                </FooterLink>
+                <FooterLink variant='body1' color='text.secondary' href='#'>
+                  How it works
+                </FooterLink>
+                <FooterLink
                   variant='body1'
-                  mb={1}
-                  fontWeight={700}
-                  sx={{ visibility: 'hidden' }}
+                  color='text.secondary'
+                  href={FAQ_LINK}
                 >
-                  Company Policies
-                </Typography>
-                <FooterNavLink href='#'>Privacy Policy</FooterNavLink>
-                <FooterNavLink href='#'>Terms and Conditions</FooterNavLink>
-                <FooterNavLink href='#'>Cookie Policy</FooterNavLink>
-                <FooterNavLink href='#'>Language</FooterNavLink>
+                  FAQ
+                </FooterLink>
+                <FooterLink variant='body1' color='text.secondary' href='#'>
+                  Affiliates
+                </FooterLink>
+                <FooterLink variant='body1' color='text.secondary' href='#'>
+                  How to get More Sales
+                </FooterLink>
+                <FooterLink variant='body1' color='text.secondary' href='#'>
+                  Customer Support
+                </FooterLink>
               </Box>
             </LinkContent>
           </FooterContainerStyle>
-          <TypoEnd variant='body2'>@ ConovoTach 2022</TypoEnd>
+          <FooterRightsSecWrapper>
+            <FooterRightsSec>
+              <Typography variant='body2' component='span'>
+                2022 ConovoTech
+              </Typography>
+              <Typography variant='body2' component='span'>
+                All rights reserved
+              </Typography>
+            </FooterRightsSec>
+            <FooterRightsSec>
+              <FooterLink
+                href={PRIVACY_POLICY_LINK}
+                underline='none'
+                variant='body2'
+                color='inherit'
+              >
+                Privacy Policy
+              </FooterLink>
+              <FooterLink
+                href={TERMS_LINK}
+                underline='none'
+                variant='body2'
+                color='inherit'
+              >
+                Terms and Conditions
+              </FooterLink>
+              <FooterLink
+                href='#'
+                underline='none'
+                variant='body2'
+                color='inherit'
+              >
+                Cookie Policy
+              </FooterLink>
+              <FooterLink
+                href='#'
+                underline='none'
+                variant='body2'
+                color='inherit'
+              >
+                Language
+              </FooterLink>
+            </FooterRightsSec>
+          </FooterRightsSecWrapper>
         </Box>
       </SectionRoot>
     </Box>

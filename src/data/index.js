@@ -89,3 +89,74 @@ export const CardInfo = [
     link: '#',
   },
 ];
+
+export const blogs = [
+  {
+    title:
+      'Data lake on AWS will increase the efficiency of your data analysts by 25 percent: tech study',
+    publishedOn: 'Nov 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28984/bun-benchmark-small-900x590.jpg',
+    author: {
+      name: 'Alex Smith',
+      img: '/static/images/user.jpg',
+      bio: 'Software Architect',
+    },
+  },
+  {
+    title: 'Bun benchmark speed test. Is it worth moving to Bun from Node?',
+    publishedOn: 'Oct 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28773/Microinteractions-examples-small-900x590.png',
+    author: {
+      name: 'Silva De Ro',
+      img: '/static/images/user.jpg',
+      bio: 'Node.js Junior Developer',
+    },
+  },
+  {
+    title: 'Developing Amazon Chime chat – a project case study',
+    publishedOn: 'Nov 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28665/api_threats_illustration_thumbnail_001-900x590.jpg',
+    author: {
+      name: 'Alex Smith',
+      img: '/static/images/user.jpg',
+      bio: 'Software Architect',
+    },
+  },
+  {
+    title: 'Bun benchmark speed test. Is it worth moving to Bun from Node?',
+    publishedOn: 'Oct 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28222/fastify-practical-overview-small-900x590.png',
+    author: {
+      name: 'Silva De Ro',
+      img: '/static/images/user.jpg',
+      bio: 'Node.js Junior Developer',
+    },
+  },
+  {
+    title: 'API security threats - TSH’s work with the OWASP top 10',
+    publishedOn: 'May 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28222/fastify-practical-overview-small-900x590.png',
+    author: {
+      name: 'Alex Smith',
+      img: '/static/images/user.jpg',
+      bio: 'QA Specialist',
+    },
+  },
+  {
+    title:
+      'All about UX writing – How to create intuitive content that people want to read',
+    publishedOn: 'Jan 12, 2022',
+    blogImg:
+      'https://tsh.io/wp-content/uploads/fly-images/28222/fastify-practical-overview-small-900x590.png',
+    author: {
+      name: 'Silva De Ro',
+      img: '/static/images/user.jpg',
+      bio: 'Product Designer',
+    },
+  },
+];

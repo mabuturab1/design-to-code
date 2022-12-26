@@ -77,17 +77,14 @@ const Technologies = () => {
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.
         </Typography>
-        {/* <BackIllustration sx={{ top: 0, right: '2.5rem' }}>
-          <picture>
-            <img
-              height='100%'
-              width='100%'
-              src='/static/images/dot2.svg'
-              alt='Landscape picture'
-            />
-          </picture>
-        </BackIllustration> */}
-        <TechIonsCont>
+        <TechIonsCont
+          whileInView={{ opacity: [0, 1] }}
+          transition={{
+            duration: 1,
+            ease: 'easeOut',
+            delay: 0.25,
+          }}
+        >
           <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
           <AvatarCont>{avatars_2(androidIcon, postmanIcon)}</AvatarCont>
           <AvatarCont>{avatars_2(awsIcon, reactIcon)}</AvatarCont>

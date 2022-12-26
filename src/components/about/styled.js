@@ -1,4 +1,5 @@
 import { Box, styled } from '@mui/material';
+import { motion } from 'framer-motion';
 
 export const Container = styled(Box)(({ theme }) => ({
   width: '100%',
@@ -28,7 +29,7 @@ export const WorkContentCont = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const WorkContent = styled(Box)(({ theme }) => ({
+export const WorkContent = styled(motion.div)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',

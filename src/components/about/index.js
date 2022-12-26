@@ -1,6 +1,7 @@
 import { Avatar, Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { BackIllustration, SectionRoot } from '../custom';
+import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 
 import { Container, WorkContent, WorkContentCont, WorkImgSm } from './styled';
@@ -9,7 +10,15 @@ const index = () => {
   return (
     <SectionRoot className='sectionGap' sx={{ position: 'relative' }}>
       <WorkContentCont>
-        <div className='illustration'>
+        <motion.div
+          className='illustration'
+          whileInView={{ opacity: [0, 1] }}
+          transition={{
+            duration: 1.25,
+            ease: 'easeOut',
+            delay: 1,
+          }}
+        >
           <picture>
             <img
               src='/static/images/aboutUsIllustration.svg'
@@ -18,8 +27,15 @@ const index = () => {
               alt='Landscape picture'
             />
           </picture>
-        </div>
-        <WorkContent>
+        </motion.div>
+        <WorkContent
+          whileInView={{ x: [100, 0], opacity: [0, 1] }}
+          transition={{
+            duration: 1.25,
+            ease: 'easeOut',
+            delay: 1.5,
+          }}
+        >
           <Typography variant='h2'>About Us</Typography>
           <Typography
             variant='body1'

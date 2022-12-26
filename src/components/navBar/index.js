@@ -17,25 +17,26 @@ import { Dialog, Divider, Drawer, Link, List, ListItem } from '@mui/material';
 import { NavbarList, NavBarRoot, NavDrawerList, NavLink } from './styled';
 import { MHidden } from '../custom/MHidden';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-
+import {
+  PORTFOLIO_LINK,
+  ABOUT_LINK,
+  BLOGS_LINK,
+  CONTACTUS_LINK,
+} from '../../utils/links';
 // const navItems = ['Portfolio', 'About Us', 'Blog', 'Contact Us'];
 
 const navItems = [
   {
     label: 'Portfolio',
-    url: '/#portfolio',
+    url: PORTFOLIO_LINK,
   },
   {
     label: 'About Us',
-    url: '/about-us',
+    url: ABOUT_LINK,
   },
   {
     label: 'Blog',
-    url: '/',
-  },
-  {
-    label: 'Contact Us',
-    url: '/#contact-us',
+    url: BLOGS_LINK,
   },
 ];
 
@@ -74,10 +75,18 @@ function NavBar() {
               <MHidden type='down' value='sm'>
                 <NavbarList>
                   {navItems.map((navItem) => (
-                    <NavLink href={navItem.url} key={navItem.label}>
+                    <NavLink
+                      variant='subtitle2'
+                      color='text.primary'
+                      href={navItem.url}
+                      key={navItem.label}
+                    >
                       {navItem.label}
                     </NavLink>
                   ))}
+                  <Button variant='outlined' href={CONTACTUS_LINK}>
+                    Contact Us
+                  </Button>
                 </NavbarList>
               </MHidden>
             </NavBarRoot>
@@ -118,11 +127,16 @@ function NavBar() {
               key={navItem.label}
               onClick={toggleSideBar}
             >
-              <ListItem button>
-                <Typography variant='subtitle1'>{navItem.label}</Typography>
+              <ListItem>
+                <Typography variant='body1'>{navItem.label}</Typography>
               </ListItem>
             </NavLink>
           ))}
+          <ListItem>
+            <Button variant='outlined' href={CONTACTUS_LINK}>
+              Contact Us
+            </Button>
+          </ListItem>
         </NavDrawerList>
       </Drawer>
     </React.Fragment>

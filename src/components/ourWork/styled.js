@@ -1,4 +1,5 @@
 import { Box, styled } from '@mui/material';
+import { motion } from 'framer-motion';
 
 export const RecWorkContainer = styled(Box)(({ theme }) => ({
   width: '200%',
@@ -15,7 +16,7 @@ export const RecWorkContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const CardContainer = styled('div')(({ theme }) => ({
+export const CardContainer = styled(motion.div)(({ theme }) => ({
   display: 'grid',
   gridGap: '2rem',
   gridTemplateColumns: 'repeat(3, 1fr)',

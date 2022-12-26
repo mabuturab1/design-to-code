@@ -16,9 +16,16 @@ const themeOptions = createTheme({
           borderRadius: 30,
           color: '#fff',
           boxShadow: 'none',
-          fontSize: 20,
-          minWidth: '14rem',
-          padding: '15px 10px',
+          '&:hover': {
+            boxShadow: 'none',
+          },
+        },
+        outlined: {
+          color: `${palette.primary.dark} !important`,
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: 'none',
+          },
         },
       },
     },
@@ -26,15 +33,11 @@ const themeOptions = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 30,
-          backgroundColor: palette.background.neutral,
-          paddingInline: '14px',
+          paddingInline: '10px',
 
           '& textarea': {
-            paddingInline: '14px',
+            paddingInline: '10px',
           },
-        },
-        notchedOutline: {
-          border: 'none',
         },
       },
     },

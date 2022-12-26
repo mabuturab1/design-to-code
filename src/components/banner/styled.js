@@ -1,6 +1,7 @@
 import { Box, styled } from '@mui/material';
+import { motion } from 'framer-motion';
 
-export const BackLines = styled('div')(({ theme }) => ({
+export const BackLines = styled(motion.div)(({ theme }) => ({
   backgroundImage: `url("/static/images/backLines-cropped.svg")`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
@@ -36,23 +37,23 @@ export const BannerContainer = styled('section')(({ theme }) => ({
   },
 }));
 
-export const BannerImage = styled('div')(({ theme }) => ({
+export const BannerImage = styled(motion.div)(({ theme }) => ({
   position: 'relative',
   [theme.breakpoints.down('md')]: {
     display: 'none',
   },
 }));
 
-export const HeaderTextContent = styled(Box)(({ theme }) => ({
+export const HeaderTextContent = styled(motion.div)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   flexWrap: 'nowrap',
   gap: '2rem',
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     textAlign: 'center',
   },
-  [theme.breakpoints.up('dm')]: {
+  [theme.breakpoints.up('md')]: {
     textAlign: 'start',
   },
 }));

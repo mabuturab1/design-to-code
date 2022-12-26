@@ -27,9 +27,9 @@ export const NavbarList = styled(Box)(({ theme }) => ({
 
 export const NavLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
-  fontSize: 18,
-  color: theme.palette.text.primary,
-  fontWeight: 500,
+  // fontSize: 18,
+  // color: theme.palette.text.primary;
+  // fontWeight: 500,
 
   '&:hover': {
     color: theme.palette.primary.main,

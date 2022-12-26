@@ -44,7 +44,17 @@ const Services = () => {
           Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
           emedan semis. Härat rär par.
         </Typography>
-        <ServCardCont mt={8}>
+        <ServCardCont
+          whileInView={{
+            y: [150, 0],
+            x: [0, 0],
+            opacity: [0, 1],
+          }}
+          transition={{
+            duration: 1.25,
+            ease: 'easeInOut',
+          }}
+        >
           {CardInfo.map((el) => (
             <ServiceCard key={el.title} {...el} />
           ))}

@@ -7,11 +7,15 @@ import {
   BannerImage,
   HeaderTextContent,
 } from './styled';
+import { motion } from 'framer-motion';
 
 const Banner = () => {
   return (
-    <BackLines className='sectionGap'>
-      {/* <SmallBackEllipse sx={{ left: 0 }} /> */}
+    <BackLines
+      className='sectionGap'
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 1.25, ease: 'easeOut' }}
+    >
       <SectionRoot sx={{ position: 'relative' }}>
         <BackIllustration sx={{ bottom: 0, right: 0 }}>
           <picture>
@@ -24,23 +28,41 @@ const Banner = () => {
           </picture>
         </BackIllustration>
         <BannerContainer>
-          <HeaderTextContent>
+          <HeaderTextContent
+            whileInView={{ y: [-200, 0], x: [0, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.85, ease: 'easeOut' }}
+          >
             <Typography variant='h2'>
               Get your Website Build Effortlessly
             </Typography>
-            <Typography variant='body1' component='span' color='text.secondary'>
+            <Typography
+              variant='body1'
+              component='span'
+              color='text.secondary'
+              sx={{ lineHeight: 2 }}
+            >
               Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev
               potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera
               i dibäs och anat. Vivyng dissa ett astrokad plaledes majyliga.
               Morade eurosak, infrar.
             </Typography>
-            <Box>
+            <motion.div
+              whileInView={{ y: [-100, 0], x: [0, 0], opacity: [0, 1] }}
+              transition={{
+                duration: 0.75,
+                ease: 'easeOut',
+                delay: 0.5,
+              }}
+            >
               <Button variant='contained' color='primary' size='large'>
-                Get A Quote
+                Book free consultation
               </Button>
-            </Box>
+            </motion.div>
           </HeaderTextContent>
-          <BannerImage>
+          <BannerImage
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 1, ease: 'easeInOut', delay: 1.5 }}
+          >
             <picture>
               <source
                 srcSet='/static/images/bannerImage-1.svg'
