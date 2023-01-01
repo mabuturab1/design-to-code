@@ -12,7 +12,7 @@ const index = () => {
       <WorkContentCont>
         <motion.div
           className='illustration'
-          whileInView={{ opacity: [0, 1] }}
+          animate={{ opacity: [0, 1] }}
           transition={{
             duration: 1.25,
             ease: 'easeOut',
@@ -29,7 +29,7 @@ const index = () => {
           </picture>
         </motion.div>
         <WorkContent
-          whileInView={{ x: [100, 0], opacity: [0, 1] }}
+          animate={{ x: [100, 0], opacity: [0, 1] }}
           transition={{
             duration: 1.25,
             ease: 'easeOut',

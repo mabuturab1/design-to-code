@@ -21,9 +21,9 @@ export const WorkContentCont = styled(Box)(({ theme }) => ({
   },
   '& .illustration': {
     flex: 1,
-    [theme.breakpoints.down('md')]: {
-      display: 'none',
-    },
+    // [theme.breakpoints.down('md')]: {
+    //   display: 'none',
+    // },
   },
 }));
 
