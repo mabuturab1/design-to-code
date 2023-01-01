@@ -4,6 +4,7 @@ import { SectionRoot } from '../custom';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { WorkContent, WorkContentCont, WorkImgSm } from './styled';
+import { CountUp as UCountUp } from 'use-count-up';
 
 const index = () => {
   return (
@@ -58,7 +59,7 @@ const index = () => {
                 </picture>
               </WorkImgSm>
               <Box>
-                <CountUp start={0} end={500} delay={1} suffix='+'>
+                {/* <CountUp start={0} end={500} delay={1} suffix='+'>
                   {({ countUpRef, start }) => (
                     <Typography
                       ref={countUpRef}
@@ -66,7 +67,16 @@ const index = () => {
                       sx={{ lineHeight: 1 }}
                     />
                   )}
-                </CountUp>
+                </CountUp> */}
+                <Typography variant='h3' sx={{ lineHeight: 1 }}>
+                  <UCountUp
+                    isCounting
+                    start={0}
+                    end={500}
+                    duration={2.9}
+                    easing='linear'
+                  />
+                </Typography>
                 <Typography variant='body1'>Satisfied Customers</Typography>
               </Box>
             </Box>
