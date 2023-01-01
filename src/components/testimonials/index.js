@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import TestimonialCard from './testimonialCard';
-import { SectionRoot, SmallBackEllipse } from '../custom';
+import { SectionRoot } from '../custom';
 
 import { sliderSettings } from './carouselSettings';
 import { ArrowStyled, SliderRoot } from './styled';
@@ -42,7 +42,6 @@ const Testimonials = () => {
           position: 'relative',
         }}
       >
-        {/* <SmallBackEllipse sx={{ left: 20, opacity: 0.1 }} /> */}
         <Box className='dispFlexColAlgnCen'>
           <Typography variant='h2' gutterBottom align='center'>
             What Customer Say About Us

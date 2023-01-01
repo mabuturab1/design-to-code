@@ -30,15 +30,11 @@ export const Feedbackform = () => {
     interest: interestSubj[0].value,
     budget: userBudget[0].value,
   };
-
   const [state, setState] = useState({ ...defaultState });
-
   const handleSubmit = () => {};
-
   const handleChange = (e) => {
     setState((st) => ({ ...st, [e.target.name]: e.target.value }));
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <GridExt container spacing={5} mt={6}>
@@ -103,7 +99,6 @@ export const Feedbackform = () => {
           <Button
             variant='contained'
             type='submit'
-            // size='large'
             sx={{ width: '12rem', height: '3rem', fontSize: '1.2rem' }}
           >
             Send Message

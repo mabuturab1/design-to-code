@@ -1,4 +1,4 @@
-import { alpha, Avatar, Box, Link, styled, Typography } from '@mui/material';
+import { Avatar, Box, Link, styled, Typography } from '@mui/material';
 
 export const FooterContainerStyle = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -9,7 +9,6 @@ export const FooterContainerStyle = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('1000')]: {
     flexDirection: 'column',
     gap: '3rem',
-    // paddingBottom: '3rem',
   },
 }));
 
@@ -32,13 +31,11 @@ export const LinkContent = styled(Box)(({ theme }) => ({
   flex: 1,
   alignItems: 'baseline',
   justifyContent: 'space-around',
-
   [theme.breakpoints.down('600')]: {
     flexDirection: 'column',
     alignItems: 'center',
     gap: '3rem',
   },
-
   '& > div': {
     display: 'flex',
     flexDirection: 'column',
@@ -61,7 +58,6 @@ export const TypoEnd = styled(Typography)(({ theme }) => ({
 
 export const AvatarExt = styled(Avatar)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
-
   '&:hover': {
     backgroundColor: theme.palette.primary.dark,
   },
@@ -69,7 +65,6 @@ export const AvatarExt = styled(Avatar)(({ theme }) => ({
 
 export const FooterLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
-
   '&:hover': {
     color: theme.palette.primary.main,
   },

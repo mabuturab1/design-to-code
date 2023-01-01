@@ -6,7 +6,6 @@ export const CustomFormControl = styled('div')(({ theme }) => ({
   gap: '0.5rem',
   width: '100%',
 }));
-
 export const GridExt = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down('600')]: {
     '& .MuiGrid-item': {
@@ -14,7 +13,6 @@ export const GridExt = styled(Grid)(({ theme }) => ({
     },
   },
 }));
-
 export const TypographyExt = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',

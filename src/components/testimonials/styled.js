@@ -68,7 +68,7 @@ export const ImgBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const Eclipse = styled(Box)(({ theme }) => ({
+export const Eclipse = styled(Box)(() => ({
   backgroundImage: `url("/static/images/eclippse.svg")`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
@@ -106,7 +106,7 @@ export const TestimonialCardRoot = styled('div')(({ theme }) => ({
   },
 }));
 
-export const SliderRoot = styled(Slider)(({ theme }) => ({
+export const SliderRoot = styled(Slider)(() => ({
   '& .slick-track > .card:not(:last-of-type)': {
     marginRight: '2rem',
   },

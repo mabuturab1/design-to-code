@@ -10,7 +10,6 @@ export const TechIonsCont = styled(motion.div)(({ theme }) => ({
   width: '100%',
   marginTop: '4rem',
   marginBottom: '-5%',
-
   '& > :nth-of-type(4n+3)': {
     marginTop: '-5%',
     alignItems: 'center',
@@ -29,7 +28,6 @@ export const BackMajorEclipse = styled(Box)(({ theme }) => ({
   right: 0,
   left: 0,
   margin: '0 auto',
-
   [theme.breakpoints.down('md')]: {
     left: 0,
     width: '100%',

@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import { BackIllustration, SectionRoot } from '../custom';
 import { Feedbackform } from './feedbackform';
 import { TypographyExt } from './styled';
 

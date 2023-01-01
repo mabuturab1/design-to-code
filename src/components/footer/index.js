@@ -1,9 +1,7 @@
 import { Avatar, Box, Link, styled, Typography } from '@mui/material';
 import React from 'react';
 import { Icon } from '@iconify/react';
-
 import { Logo } from '../Logo';
-
 import { SectionRoot } from '../custom';
 import dribbbleIcon from '@iconify/icons-bxl/dribbble';
 import facebookIcon from '@iconify/icons-bxl/facebook';
@@ -33,7 +31,7 @@ const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
 );
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <Box
       sx={{
@@ -186,3 +184,5 @@ export const Footer = () => {
     </Box>
   );
 };
+
+export default Footer;

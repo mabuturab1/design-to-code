@@ -22,10 +22,7 @@ const ServicesCard = (props) => {
         {desc}
       </Typography>
       <Link href={link} variant='body2' color='primary.dark'>
-        {/* <Box display='flex' alignItems='center' flexWrap='nowrap' gap='0.25rem'> */}
         Learn More
-        {/* <ArrowForwardIcon sx={{ fontSize: 18, color: 'primary.dark' }} /> */}
-        {/* </Box> */}
       </Link>
     </CardRoot>
   );

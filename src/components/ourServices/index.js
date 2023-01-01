@@ -1,11 +1,10 @@
 import { Box, styled, Typography } from '@mui/material';
 import React from 'react';
 
-import { BackIllustration, SectionRoot, SmallBackEllipse } from '../custom';
+import { SectionRoot } from '../custom';
 import ServiceCard from './serviceCard';
 
 import { ServCardCont } from './styled';
-
 import { CardInfo } from '../../data';
 
 export const Container = styled(Box)(({ theme }) => ({
@@ -19,18 +18,6 @@ const Services = () => {
   return (
     <Container className='sectionGap'>
       <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
-        {/* <SmallBackEllipse sx={{ right: 0, top: 80 }} /> */}
-        {/* <BackIllustration sx={{ left: 60, top: 80 }}>
-          <picture>
-            <img
-              src='/static/images/bgDots.svg'
-              height='100%'
-              width='100%'
-              alt='Landscape picture'
-            />
-          </picture>
-        </BackIllustration> */}
-
         <Typography variant='h2' gutterBottom>
           Services
         </Typography>

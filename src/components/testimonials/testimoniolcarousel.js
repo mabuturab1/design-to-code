@@ -35,7 +35,6 @@ const Testimoniolcarousel = (props) => {
                 />
               </picture>
             </BackIllustration>
-            {/* <BgBox /> */}
             <Eclipse />
             <ImgBox>
               <picture>

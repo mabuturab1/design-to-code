@@ -1,9 +1,11 @@
 import { Typography, Box, styled, Grid, Link } from '@mui/material';
+import { motion } from 'framer-motion';
 import React from 'react';
+
 import BlogCard from '../../src/components/blog/blogCard';
 import SpecCard from '../../src/components/blog/specCard';
-import { BodyRoot, SectionRoot } from '../../src/components/custom';
-import { Footer } from '../../src/components/footer';
+import { SectionRoot } from '../../src/components/custom';
+import Footer from '../../src/components/footer';
 import NavBar from '../../src/components/navBar';
 import { blogs } from '../../src/data';
 import EastIcon from '@mui/icons-material/East';
@@ -39,38 +41,53 @@ const LinkExt = styled(Link)(({ theme }) => ({
 
 const Blog = () => {
   return (
-    <React.Fragment>
-      <NavBar />
-      <BodyRoot>
-        <SectionRoot className='sectionGap'>
-          <BlogSectHeading variant='h4'>Top Articles</BlogSectHeading>
-          <Grid mt={2} mb={12} container spacing={3}>
-            <Grid item xs={12} sm={4}>
-              <SpecCard {...blogs[0]} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <SpecCard {...blogs[1]} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <SpecCard {...blogs[2]} />
-            </Grid>
+    <SectionRoot className='sectionGap'>
+      <BlogSectHeading variant='h4'>Top Articles</BlogSectHeading>
+      <Grid mt={2} mb={7} container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <motion.div
+            animate={{
+              y: [50, 0],
+              x: [0, 0],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeInOut',
+            }}
+          >
+            <SpecCard {...blogs[0]} />
+          </motion.div>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <motion.div
+            animate={{
+              y: [50, 0],
+              x: [0, 0],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 1.25,
+              ease: 'easeInOut',
+            }}
+          >
+            <SpecCard {...blogs[1]} />
+          </motion.div>
+        </Grid>
+      </Grid>
+      <BlogSectHeading variant='h4'>Recent Articles</BlogSectHeading>
+      <Grid container spacing={4} mt={3}>
+        {blogs.map((el) => (
+          <Grid key={el.title} item xs={12} sm={6} md={4}>
+            <BlogCard {...el} />
           </Grid>
-          <BlogSectHeading variant='h4'>Recent Articles</BlogSectHeading>
-          <Grid container spacing={4} mt={3}>
-            {blogs.map((el) => (
-              <Grid key={el.title} item xs={12} sm={6} md={4}>
-                <BlogCard {...el} />
-              </Grid>
-            ))}
-          </Grid>
-          <LinkExt href='/' variant='subtitle1' color='primary'>
-            More Articles
-            <EastIcon sx={{ fontSize: 18, color: 'primary' }} />
-          </LinkExt>
-        </SectionRoot>
-      </BodyRoot>
-      <Footer />
-    </React.Fragment>
+        ))}
+      </Grid>
+      <LinkExt href='/' variant='subtitle1' color='primary'>
+        More Articles
+        <EastIcon sx={{ fontSize: 18, color: 'primary' }} />
+      </LinkExt>
+    </SectionRoot>
   );
 };
 

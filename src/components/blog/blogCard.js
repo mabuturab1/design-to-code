@@ -21,10 +21,7 @@ const CardExt = styled(Card)(({ theme }) => ({
   objectFit: 'contain',
   paddingBottom: '1rem',
   transition: 'transform .3s',
-
   '& img': {
-    //     width: '100%',
-    //     height: '100%',
     borderRadius: 15,
   },
   '& .blogImg': {
@@ -32,7 +29,6 @@ const CardExt = styled(Card)(({ theme }) => ({
     height: '100%',
     position: 'relative',
     cursor: 'pointer',
-
     '&:after, a': {
       position: 'absolute',
       top: 0,
@@ -53,7 +49,6 @@ const CardExt = styled(Card)(({ theme }) => ({
       textDecoration: 'none',
     },
   },
-
   '&:hover': {
     transform: 'translateY(-1rem)',
     '& .blogImg:after, a': {

@@ -9,7 +9,6 @@ export const ServCardCont = styled(motion.div)(({ theme }) => ({
   gap: '3.5rem',
   flexWrap: 'wrap',
   justifyContent: 'center',
-
   [theme.breakpoints.up('md')]: {
     flexWrap: 'nowrap',
     justifyContent: 'space-between',
@@ -20,17 +19,10 @@ export const ServCardCont = styled(motion.div)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     gap: '2rem',
   },
-
   '& > *': {
     flex: 1,
     height: '100%',
   },
-
-  // '& > div:nth-of-type(2)': {
-  //   [theme.breakpoints.up('md')]: {
-  //     marginTop: '-7.5rem',
-  //   },
-  // },
 }));
 
 export const CardRoot = styled(Card)(({ theme }) => ({
@@ -43,7 +35,6 @@ export const CardRoot = styled(Card)(({ theme }) => ({
   textAlign: 'center',
   gap: '1rem',
   maxWidth: 340,
-
   [theme.breakpoints.down('lg')]: {
     padding: '2rem',
   },

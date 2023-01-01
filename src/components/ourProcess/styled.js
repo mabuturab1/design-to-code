@@ -15,7 +15,6 @@ export const TypoExt = styled(Typography)(({ theme }) => ({
   color: theme.palette.background.default,
   textAlign: 'center',
   position: 'relative',
-
   [theme.breakpoints.up('sm')]: {
     minWidth: 215,
   },
@@ -53,7 +52,6 @@ export const MobileContent = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   marginTop: '3rem',
   gap: '1.5rem',
-
   [theme.breakpoints.down('xs')]: {
     gap: '3rem',
     '& p': {
@@ -66,7 +64,6 @@ export const MobileContent = styled(Box)(({ theme }) => ({
     alignItems: 'center',
     flexWrap: 'nowrap',
     gap: '1.5rem',
-
     [theme.breakpoints.up('sm')]: {
       '& p': {
         paddingInline: '2rem',
@@ -88,7 +85,6 @@ export const MobileContent = styled(Box)(({ theme }) => ({
         },
       },
     },
-
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       gap: '0.75rem',
@@ -114,11 +110,9 @@ export const BulletCircle = styled(Box)(({ theme }) => ({
   bottom: 0,
   zIndex: 102,
   backgroundColor: theme.palette.primary.main,
-
   borderRadius: '50%',
   width: 25,
   height: 25,
-
   [theme.breakpoints.down('sm')]: {
     display: 'none',
   },
@@ -131,7 +125,6 @@ export const QontoStepIconRoot = styled('div')(({ theme }) => ({
   display: 'flex',
   height: 22,
   alignItems: 'center',
-
   '& .QontoStepIcon-circle': {
     width: 20,
     height: 20,
@@ -154,13 +147,11 @@ export const StepperConnectorHorExt = styled(Box)(({ theme }) => ({
   flex: '1 1 auto',
   position: 'absolute',
   top: 9,
-
   '& span': {
     display: 'block',
     borderTopStyle: 'solid',
     borderColor: theme.palette.primary.main,
     borderTopWidth: 3,
-    // borderRadius: 1,
   },
 }));
 
@@ -173,7 +164,6 @@ export const QontoConnector = styled(StepConnector)(({ theme }) => ({
   [`& .${stepConnectorClasses.line}`]: {
     borderColor: theme.palette.primary.main,
     borderTopWidth: 3,
-    // boxShadow: `0px 0px 49px 10px ${theme.palette.primary.main}3b`,
   },
 }));
 

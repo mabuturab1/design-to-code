@@ -18,32 +18,26 @@ const Consultation = () => {
   return (
     <SectionRoot className='sectionGap'>
       <Wrapper
-        whileInView={{ y: [150, 0], x: [0, 0], opacity: [0, 1] }}
-        transition={{
-          duration: 1,
-          ease: 'easeOut',
-          delay: 0.25,
-          delayChildren: 2,
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
         }}
       >
+        <Typography variant='h3' mb={4} px={4}>
+          Work with teams CTOs praise as “super-friendly” and “reliable”
+        </Typography>
         <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{
-            duration: 1.25,
-            ease: 'easeOut',
-            delay: 1,
-          }}
-        >
-          <Typography variant='h3' mb={4} px={4}>
-            Work with teams CTOs praise as “super-friendly” and “reliable”
-          </Typography>
-        </motion.div>
-        <motion.div
-          whileInView={{ x: [0, 0], y: [50, 0], opacity: [0, 1] }}
-          transition={{
-            duration: 1.25,
-            ease: 'easeOut',
-            delay: 1,
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          transition={{ delay: 1, duration: 1 }}
+          variants={{
+            visible: { y: 0, opacity: 1 },
+            hidden: { y: 50, opacity: 0 },
           }}
         >
           <Button

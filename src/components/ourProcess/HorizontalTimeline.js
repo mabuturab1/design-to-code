@@ -4,7 +4,6 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import { Stepper, StepperContext, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-
 import {
   QontoConnector,
   QontoStepIconRoot,

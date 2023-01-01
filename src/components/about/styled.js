@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/material';
 import { motion } from 'framer-motion';
 
-export const Container = styled(Box)(({ theme }) => ({
+export const Container = styled(Box)(() => ({
   width: '100%',
   height: '100%',
   paddingBlock: '2.5rem',
@@ -13,14 +13,12 @@ export const WorkContentCont = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   gap: '2rem',
   justifyContent: 'space-between',
-
   [theme.breakpoints.up('md')]: {
     flexWrap: 'nowrap',
     flexDirection: 'row',
     alignItems: 'center',
     gap: '5rem',
   },
-
   '& .illustration': {
     flex: 1,
     [theme.breakpoints.down('md')]: {
@@ -46,7 +44,6 @@ export const WorkContent = styled(motion.div)(({ theme }) => ({
       marginTop: '4rem',
     },
   },
-
   '& .statsContent': {
     width: '100%',
     display: 'flex',
@@ -62,7 +59,7 @@ export const WorkContent = styled(motion.div)(({ theme }) => ({
   },
 }));
 
-export const WorkImgSm = styled('div')(({ theme }) => ({
+export const WorkImgSm = styled('div')(() => ({
   '& img': {
     width: 60,
     height: '100%',

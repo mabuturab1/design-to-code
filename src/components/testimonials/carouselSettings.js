@@ -2,7 +2,6 @@ export const sliderSettings = {
   className: 'center',
   centerMode: true,
   infinite: true,
-  //   centerPadding: '60px',
   slidesToShow: 3,
   slidesToScroll: 1,
   rows: 1,
@@ -14,7 +13,6 @@ export const sliderSettings = {
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
-        // dots: true,
       },
     },
     {

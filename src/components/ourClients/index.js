@@ -15,13 +15,11 @@ const Container = styled('div')(({ theme }) => ({
   gap: '1.5rem',
   justifyContent: 'center',
   height: 'fit-content',
-
   '& .logoBox': {
     border: `2px solid #000`,
     padding: '1rem',
     borderRadius: 10,
     objectFit: 'contain',
-
     '& img': {
       maxWidth: 125,
     },

@@ -9,7 +9,6 @@ export const RecWorkContainer = styled(Box)(({ theme }) => ({
   left: '-50%',
   right: 0,
   position: 'relative',
-
   [theme.breakpoints.down('449')]: {
     width: '300%',
     left: '-100%',
@@ -20,7 +19,6 @@ export const CardContainer = styled(motion.div)(({ theme }) => ({
   display: 'grid',
   gridGap: '2rem',
   gridTemplateColumns: 'repeat(3, 1fr)',
-
   [theme.breakpoints.between('450', '543')]: {
     gridTemplateColumns: 'repeat(2, 1fr)',
   },
@@ -29,7 +27,7 @@ export const CardContainer = styled(motion.div)(({ theme }) => ({
   },
 }));
 
-export const RootStyle = styled(Box)(({ theme }) => ({
+export const RootStyle = styled(Box)(() => ({
   width: '100%',
   height: 'fit-content',
   overflow: 'hidden',

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Avatar, Box, Card, CardMedia, Typography } from '@mui/material';
 
 export default function WorkCard(props) {

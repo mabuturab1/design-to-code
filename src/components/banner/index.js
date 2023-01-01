@@ -76,7 +76,6 @@ const Banner = () => {
               />
             </picture>
           </BannerImage>
-          {/* <div className='imageBackDrop' /> */}
         </BannerContainer>
       </SectionRoot>
     </BackLines>

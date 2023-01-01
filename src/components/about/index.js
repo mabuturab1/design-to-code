@@ -1,10 +1,9 @@
 import { Avatar, Box, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { BackIllustration, SectionRoot } from '../custom';
+import { SectionRoot } from '../custom';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-
-import { Container, WorkContent, WorkContentCont, WorkImgSm } from './styled';
+import { WorkContent, WorkContentCont, WorkImgSm } from './styled';
 
 const index = () => {
   return (

@@ -23,7 +23,6 @@ import {
   BLOGS_LINK,
   CONTACTUS_LINK,
 } from '../../utils/links';
-// const navItems = ['Portfolio', 'About Us', 'Blog', 'Contact Us'];
 
 const navItems = [
   {
@@ -42,11 +41,9 @@ const navItems = [
 
 function NavBar() {
   const [open, setOpen] = useState(false);
-
   const toggleSideBar = () => {
     setOpen((prev) => !prev);
   };
-
   return (
     <React.Fragment>
       <AppBar

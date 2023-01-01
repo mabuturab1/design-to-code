@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/material';
 import { motion } from 'framer-motion';
 
-export const BackLines = styled(motion.div)(({ theme }) => ({
+export const BackLines = styled(motion.div)(() => ({
   backgroundImage: `url("/static/images/backLines-cropped.svg")`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
@@ -49,7 +49,6 @@ export const HeaderTextContent = styled(motion.div)(({ theme }) => ({
   flexDirection: 'column',
   flexWrap: 'nowrap',
   gap: '2rem',
-
   [theme.breakpoints.down('md')]: {
     textAlign: 'center',
   },
