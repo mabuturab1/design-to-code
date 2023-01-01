@@ -76,6 +76,7 @@ const index = () => {
                     duration={2.9}
                     easing='linear'
                   />
+                  +
                 </Typography>
                 <Typography variant='body1'>Satisfied Customers</Typography>
               </Box>
@@ -92,7 +93,7 @@ const index = () => {
                 </picture>
               </WorkImgSm>
               <Box>
-                <CountUp start={0} end={12} delay={1} suffix='+'>
+                {/* <CountUp start={0} end={12} delay={1} suffix='+'>
                   {({ countUpRef, start }) => (
                     <Typography
                       ref={countUpRef}
@@ -100,7 +101,17 @@ const index = () => {
                       sx={{ lineHeight: 1 }}
                     />
                   )}
-                </CountUp>
+                </CountUp> */}
+                <Typography variant='h3' sx={{ lineHeight: 1 }}>
+                  <UCountUp
+                    isCounting
+                    start={0}
+                    end={12}
+                    duration={2.9}
+                    easing='linear'
+                  />
+                  +
+                </Typography>
                 <Typography variant='body1'>Experience</Typography>
               </Box>
             </Box>
