@@ -20,7 +20,7 @@ export const ServCardCont = styled(motion.div)(({ theme }) => ({
     gap: '2rem',
   },
   '& > *': {
-    flex: 1,
+    // flex: 1,
     height: '100%',
   },
 }));
