@@ -64,13 +64,7 @@ function NavBar() {
   };
   return (
     <React.Fragment>
-      <AppBar
-        position='sticky'
-        color='inherit'
-        sx={{
-          boxShadow: '0 0 3px 1px #0003',
-        }}
-      >
+      <AppBar position='sticky' color='inherit' elevation={0}>
         <Container maxWidth='lg'>
           <Toolbar disableGutters>
             <NavBarRoot>

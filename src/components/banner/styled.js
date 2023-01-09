@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 export const BackLines = styled(motion.div)(() => ({
   backgroundImage: `url("/static/images/backLines-cropped.svg")`,
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
+  // backgroundPosition: 'center',
   backgroundSize: 'cover',
   position: 'relative',
-  marginTop: '2.5rem',
+  // marginTop: '2.5rem',
 }));
 
 export const BannerContainer = styled('section')(({ theme }) => ({

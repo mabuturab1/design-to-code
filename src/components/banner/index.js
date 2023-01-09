@@ -17,7 +17,7 @@ const Banner = () => {
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 1.25, ease: 'easeOut' }}
     >
-      <SectionRoot sx={{ position: 'relative' }}>
+      <SectionRoot sx={{ position: 'relative' }} mt={3}>
         <BackIllustration sx={{ bottom: 0, right: 0 }}>
           <Avatar
             variant='square'
