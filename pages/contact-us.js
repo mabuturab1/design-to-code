@@ -1,8 +1,8 @@
 import React from 'react';
-import { SectionRoot } from '../src/components/custom';
-import Feedbackform from '../src/components/feedback';
 import { Box, Container, Link } from '@mui/material';
-import { Logo } from '../src/components/Logo';
+
+import Feedbackform from 'components/feedback';
+import { Logo } from 'components/Logo';
 
 const ContactUs = () => {
   return <Feedbackform />;
@@ -10,8 +10,8 @@ const ContactUs = () => {
 
 ContactUs.getLayout = function getLayout(page) {
   return (
-    <Container maxWidth='md'>
-      <SectionRoot className='sectionGap' id='contact-us' my={4}>
+    <Container sx={{ maxWidth: '720px !important' }}>
+      <Box className='sectionGap' my={8}>
         <Box
           display='flex'
           alignItems='center'
@@ -30,7 +30,7 @@ ContactUs.getLayout = function getLayout(page) {
           </Link>
         </Box>
         {page}
-      </SectionRoot>
+      </Box>
     </Container>
   );
 };

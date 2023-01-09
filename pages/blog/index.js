@@ -1,13 +1,13 @@
-import { Typography, Box, styled, Grid, Link } from '@mui/material';
+import { Typography, styled, Grid, Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import BlogCard from '../../src/components/blog/blogCard';
-import SpecCard from '../../src/components/blog/specCard';
-import { SectionRoot } from '../../src/components/custom';
-import Footer from '../../src/components/footer';
-import NavBar from '../../src/components/navBar';
-import { blogs } from '../../src/data';
+import BlogCard from 'components/blog/blogCard';
+import SpecCard from 'components/blog/specCard';
+import { SectionRoot } from 'components/custom';
+
+import { blogs } from 'data';
+
 import EastIcon from '@mui/icons-material/East';
 
 const BlogSectHeading = styled(Typography)(({ theme }) => ({
@@ -54,6 +54,7 @@ const Blog = () => {
             transition={{
               duration: 1.25,
               ease: 'easeInOut',
+              delay: 0.25,
             }}
           >
             <SpecCard {...blogs[0]} />
@@ -69,6 +70,7 @@ const Blog = () => {
             transition={{
               duration: 1.25,
               ease: 'easeInOut',
+              delay: 0.25,
             }}
           >
             <SpecCard {...blogs[1]} />

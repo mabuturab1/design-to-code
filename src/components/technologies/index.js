@@ -80,7 +80,7 @@ const Technologies = () => {
         <TechIonsCont
           whileInView={{ opacity: [0, 1] }}
           transition={{
-            duration: 1,
+            duration: 1.25,
             ease: 'easeOut',
             delay: 0.25,
           }}

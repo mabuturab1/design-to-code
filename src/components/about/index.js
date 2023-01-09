@@ -1,124 +1,94 @@
-import { Avatar, Box, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import React from 'react';
-import { SectionRoot } from '../custom';
-import { motion } from 'framer-motion';
-import CountUp from 'react-countup';
-import { WorkContent, WorkContentCont, WorkImgSm } from './styled';
-import { CountUp as UCountUp } from 'use-count-up';
+import { FlexForImgCont, LargeRespImage } from '../custom';
+import { WorkContent } from './styled';
+import { CountUp } from 'use-count-up';
+import Image from 'next/image';
 
 const index = () => {
   return (
-    <SectionRoot className='sectionGap' sx={{ position: 'relative' }}>
-      <WorkContentCont>
-        <motion.div
-          className='illustration'
-          animate={{ opacity: [0, 1] }}
-          transition={{
-            duration: 1.25,
-            ease: 'easeOut',
-            delay: 1,
-          }}
-        >
-          <picture>
-            <img
-              src='/static/images/aboutUsIllustration.svg'
-              height='100%'
-              width='100%'
-              alt='Landscape picture'
+    <FlexForImgCont alignItems='center' gap='1rem'>
+      <LargeRespImage
+        animate={{ opacity: [0, 1] }}
+        transition={{
+          duration: 1.25,
+          ease: 'easeOut',
+          delay: 1,
+        }}
+      >
+        <Image
+          src='/static/images/aboutUsIllustration.svg'
+          layout='responsive'
+          width={560}
+          height={400}
+          alt='About ConovoTech'
+          className='image'
+          priority
+        />
+      </LargeRespImage>
+
+      <WorkContent
+        animate={{ x: [40, 0], opacity: [0, 1] }}
+        transition={{
+          duration: 1.25,
+          ease: 'easeOut',
+          delay: 0.5,
+        }}
+      >
+        <Typography variant='h2'>About Us</Typography>
+        <Typography variant='body1' color='textSecondary' className='subtitle'>
+          Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
+          emedan semis. Härat rär par. Lörem ipsum georening buköska vaben.
+          Dögyns eurong. Povisovis josm, emedan semis. Härat rär par.
+        </Typography>
+        <div className='statsContent'>
+          <Box display='flex' flexWrap='nowrap' gap='1.5rem'>
+            <Avatar
+              variant='square'
+              src='/static/images/customerRating.svg'
+              alt='Satisfied Customers'
+              sx={{ width: 55, height: 55 }}
             />
-          </picture>
-        </motion.div>
-        <WorkContent
-          animate={{ x: [100, 0], opacity: [0, 1] }}
-          transition={{
-            duration: 1.25,
-            ease: 'easeOut',
-            delay: 1.5,
-          }}
-        >
-          <Typography variant='h2'>About Us</Typography>
-          <Typography
-            variant='body1'
-            color='textSecondary'
-            className='subtitle'
-          >
-            Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-            emedan semis. Härat rär par. Lörem ipsum georening buköska vaben.
-            Dögyns eurong. Povisovis josm, emedan semis. Härat rär par.
-          </Typography>
-          <div className='statsContent'>
-            <Box display='flex' flexWrap='nowrap' gap='1.5rem'>
-              <WorkImgSm>
-                <picture>
-                  <img
-                    src='/static/images/customerRating.svg'
-                    height='100%'
-                    width='100%'
-                    alt='Landscape picture'
-                  />
-                </picture>
-              </WorkImgSm>
-              <Box>
-                {/* <CountUp start={0} end={500} delay={1} suffix='+'>
-                  {({ countUpRef, start }) => (
-                    <Typography
-                      ref={countUpRef}
-                      variant='h3'
-                      sx={{ lineHeight: 1 }}
-                    />
-                  )}
-                </CountUp> */}
-                <Typography variant='h3' sx={{ lineHeight: 1 }}>
-                  <UCountUp
-                    isCounting
-                    start={0}
-                    end={500}
-                    duration={2.9}
-                    easing='linear'
-                  />
-                  +
-                </Typography>
-                <Typography variant='body1'>Satisfied Customers</Typography>
-              </Box>
+
+            <Box>
+              <Typography variant='h3' sx={{ lineHeight: 1 }}>
+                <CountUp
+                  isCounting
+                  start={0}
+                  end={500}
+                  duration={2.9}
+                  easing='linear'
+                />
+                +
+              </Typography>
+              <Typography variant='body1'>Satisfied Customers</Typography>
             </Box>
-            <Box display='flex' flexWrap='nowrap' gap='1.5rem'>
-              <WorkImgSm>
-                <picture>
-                  <img
-                    src='/static/images/workExp_2.svg'
-                    height='100%'
-                    width='100%'
-                    alt='Landscape picture'
-                  />
-                </picture>
-              </WorkImgSm>
-              <Box>
-                {/* <CountUp start={0} end={12} delay={1} suffix='+'>
-                  {({ countUpRef, start }) => (
-                    <Typography
-                      ref={countUpRef}
-                      variant='h3'
-                      sx={{ lineHeight: 1 }}
-                    />
-                  )}
-                </CountUp> */}
-                <Typography variant='h3' sx={{ lineHeight: 1 }}>
-                  <UCountUp
-                    isCounting
-                    start={0}
-                    end={12}
-                    duration={2.9}
-                    easing='linear'
-                  />
-                  +
-                </Typography>
-                <Typography variant='body1'>Experience</Typography>
-              </Box>
+          </Box>
+          <Box display='flex' flexWrap='nowrap' gap='1.5rem'>
+            <Avatar
+              variant='square'
+              src='/static/images/workExp_2.svg'
+              alt='Satisfied Customers'
+              sx={{ width: 55, height: 55 }}
+            />
+
+            <Box>
+              <Typography variant='h3' sx={{ lineHeight: 1 }}>
+                <CountUp
+                  isCounting
+                  start={0}
+                  end={12}
+                  duration={2.9}
+                  easing='linear'
+                />
+                +
+              </Typography>
+              <Typography variant='body1'>Experience</Typography>
             </Box>
-          </div>
-        </WorkContent>
-      </WorkContentCont>
-    </SectionRoot>
+          </Box>
+        </div>
+      </WorkContent>
+    </FlexForImgCont>
   );
 };
 

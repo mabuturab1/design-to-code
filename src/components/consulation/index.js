@@ -21,7 +21,7 @@ const Consultation = () => {
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 1.25 }}
         variants={{
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 },
@@ -34,10 +34,10 @@ const Consultation = () => {
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 1, duration: 1.25 }}
           variants={{
             visible: { y: 0, opacity: 1 },
-            hidden: { y: 50, opacity: 0 },
+            hidden: { y: 30, opacity: 0 },
           }}
         >
           <Button

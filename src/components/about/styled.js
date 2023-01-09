@@ -8,25 +8,6 @@ export const Container = styled(Box)(() => ({
   background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
 }));
 
-export const WorkContentCont = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2rem',
-  justifyContent: 'space-between',
-  [theme.breakpoints.up('md')]: {
-    flexWrap: 'nowrap',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: '5rem',
-  },
-  '& .illustration': {
-    flex: 1,
-    // [theme.breakpoints.down('md')]: {
-    //   display: 'none',
-    // },
-  },
-}));
-
 export const WorkContent = styled(motion.div)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -56,13 +37,5 @@ export const WorkContent = styled(motion.div)(({ theme }) => ({
       flexDirection: 'column',
       width: 'fit-content',
     },
-  },
-}));
-
-export const WorkImgSm = styled('div')(() => ({
-  '& img': {
-    width: 60,
-    height: '100%',
-    objectFit: 'contain',
   },
 }));

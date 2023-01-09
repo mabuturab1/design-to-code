@@ -1,4 +1,4 @@
-import { Link } from '@mui/material';
+import { Avatar, Link } from '@mui/material';
 import React from 'react';
 
 export const Logo = ({ sx, ...other }) => {
@@ -11,14 +11,12 @@ export const Logo = ({ sx, ...other }) => {
       }}
       {...other}
     >
-      <picture>
-        <img
-          src='/static/images/logo.svg'
-          height='100%'
-          width='100%'
-          alt='Landscape picture'
-        />
-      </picture>
+      <Avatar
+        variant='square'
+        src='/static/images/logo.svg'
+        alt='ConovoTech'
+        sx={{ width: '100%', height: '100%' }}
+      />
     </Link>
   );
 };

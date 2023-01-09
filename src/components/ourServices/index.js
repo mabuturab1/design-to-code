@@ -1,22 +1,15 @@
 import { Box, styled, Typography } from '@mui/material';
 import React from 'react';
 
-import { SectionRoot } from '../custom';
+import { BackColoredCont, SectionRoot } from '../custom';
 import ServiceCard from './serviceCard';
 
 import { ServCardCont } from './styled';
-import { CardInfo } from '../../data';
-
-export const Container = styled(Box)(({ theme }) => ({
-  width: '100%',
-  height: '100%',
-  paddingBlock: '1.5rem',
-  background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
-}));
+import { ServiceList } from './services.data';
 
 const Services = () => {
   return (
-    <Container className='sectionGap'>
+    <BackColoredCont className='sectionGap' id='services'>
       <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
         <Typography variant='h2' gutterBottom>
           Services
@@ -33,21 +26,22 @@ const Services = () => {
         </Typography>
         <ServCardCont
           whileInView={{
-            y: [150, 0],
+            y: [50, 0],
             x: [0, 0],
             opacity: [0, 1],
           }}
           transition={{
             duration: 1.25,
             ease: 'easeInOut',
+            delay: 0.25,
           }}
         >
-          {CardInfo.map((el) => (
+          {ServiceList.map((el) => (
             <ServiceCard key={el.title} {...el} />
           ))}
         </ServCardCont>
       </SectionRoot>
-    </Container>
+    </BackColoredCont>
   );
 };
 

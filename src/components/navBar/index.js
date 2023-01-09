@@ -13,7 +13,15 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Logo } from '../Logo';
-import { Dialog, Divider, Drawer, Link, List, ListItem } from '@mui/material';
+import {
+  Dialog,
+  Divider,
+  Drawer,
+  Link,
+  List,
+  ListItem,
+  styled,
+} from '@mui/material';
 import { NavbarList, NavBarRoot, NavDrawerList, NavLink } from './styled';
 import { MHidden } from '../custom/MHidden';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
@@ -22,9 +30,19 @@ import {
   ABOUT_LINK,
   BLOGS_LINK,
   CONTACTUS_LINK,
+  COMPANY_LINK,
+  SERVICES_LINK,
 } from '../../utils/links';
 
 const navItems = [
+  {
+    label: 'Company',
+    url: COMPANY_LINK,
+  },
+  {
+    label: 'Services',
+    url: SERVICES_LINK,
+  },
   {
     label: 'Portfolio',
     url: PORTFOLIO_LINK,
@@ -90,6 +108,7 @@ function NavBar() {
           </Toolbar>
         </Container>
       </AppBar>
+
       <Drawer
         anchor='left'
         onClose={toggleSideBar}

@@ -1,28 +1,7 @@
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-} from '@mui/lab';
-import { Box, styled, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import React from 'react';
 
-import { MHidden } from '../custom/MHidden';
-import { BackIllustration, SectionRoot, SmallBackEllipse } from '../custom';
-
-import LensIcon from '@mui/icons-material/Lens';
-import {
-  BulletBorder,
-  BulletCircle,
-  InnerBox,
-  MobileContent,
-  TimelineConnectorExt,
-  TimelineDotExt,
-  TypoExt,
-} from './styled';
+import { SectionRoot } from 'components/custom';
 import HorizontalStepper from './HorizontalTimeline';
 
 const Process = () => {

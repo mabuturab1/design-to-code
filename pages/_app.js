@@ -4,10 +4,10 @@ import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import theme from '../src/theme';
-import createEmotionCache from '../src/createEmotionCache';
-import GlobalStyles from '../src/theme/globalStyles';
-import NavFootrLayout from '../src/layouts/NavFootrLayout';
+import theme from 'theme';
+import createEmotionCache from 'createEmotionCache';
+import GlobalStyles from 'theme/globalStyles';
+import NavFootrLayout from 'layouts/NavFootrLayout';
 
 const clientSideEmotionCache = createEmotionCache();
 

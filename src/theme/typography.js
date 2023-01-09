@@ -1,4 +1,12 @@
 // ----------------------------------------------------------------------
+import { Inter } from '@next/font/google';
+
+export const inter = Inter({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'sans-serif'],
+});
 
 export function remToPx(value) {
   return Math.round(parseFloat(value) * 16);
@@ -25,7 +33,7 @@ export function responsiveFontSizes({ sm, md, lg }) {
 // ----------------------------------------------------------------------
 
 const typography = {
-  fontFamily: 'Inter, sans-serif',
+  fontFamily: inter.style.fontFamily,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
   fontWeightBold: 700,

@@ -1,6 +1,6 @@
 import React from 'react';
-import About from '../src/components/about';
-import { SectionRoot } from '../src/components/custom';
+import About from 'components/about';
+import { SectionRoot } from 'components/custom';
 
 const AboutUs = () => {
   return (

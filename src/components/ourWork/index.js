@@ -38,13 +38,14 @@ const RecentWork = () => {
           </Box>
           <CardContainer
             whileInView={{
-              y: [150, 0],
+              y: [60, 0],
               x: [0, 0],
               opacity: [0, 1],
             }}
             transition={{
               duration: 1.25,
               ease: 'easeInOut',
+              delay: 0.25,
             }}
           >
             {Work.slice(0, 3).map((el, i) => (
@@ -52,11 +53,11 @@ const RecentWork = () => {
             ))}
           </CardContainer>
           <motion.div
-            whileInView={{ y: [-80, 0], x: [0, 0], opacity: [0, 1] }}
+            whileInView={{ y: [-20, 0], x: [0, 0], opacity: [0, 1] }}
             transition={{
-              duration: 1,
+              duration: 1.25,
               ease: 'easeOut',
-              delay: 0.5,
+              delay: 1,
             }}
           >
             <Button variant='contained' color='primary'>

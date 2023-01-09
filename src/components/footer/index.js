@@ -3,10 +3,16 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import { Logo } from '../Logo';
 import { SectionRoot } from '../custom';
-import dribbbleIcon from '@iconify/icons-bxl/dribbble';
-import facebookIcon from '@iconify/icons-bxl/facebook';
-import twitterIcon from '@iconify/icons-bxl/twitter';
-import youtubeIcon from '@iconify/icons-bxl/youtube';
+// import dribbbleIcon from '@iconify/icons-bxl/dribbble';
+// import facebookIcon from '@iconify/icons-bxl/facebook';
+// import twitterIcon from '@iconify/icons-bxl/twitter';
+// import youtubeIcon from '@iconify/icons-bxl/youtube';
+
+import youtubeIcon from '@iconify/icons-simple-icons/youtube';
+import dribbbleIcon from '@iconify/icons-simple-icons/dribbble';
+import twitterIcon from '@iconify/icons-simple-icons/twitter';
+import facebookIcon from '@iconify/icons-simple-icons/facebook';
+
 import {
   AvatarExt,
   CompInfoCont,
@@ -25,11 +31,36 @@ import {
   PORTFOLIO_LINK,
   PRIVACY_POLICY_LINK,
   TERMS_LINK,
+  COMPANY_LINK,
+  SERVICES_LINK,
 } from '../../utils/links';
 
 const getIcon = (name) => (
   <Icon icon={name} width={22} height={22} color='#fff' />
 );
+
+const navItems = [
+  {
+    label: 'Company',
+    url: COMPANY_LINK,
+  },
+  {
+    label: 'Services',
+    url: SERVICES_LINK,
+  },
+  {
+    label: 'Portfolio',
+    url: PORTFOLIO_LINK,
+  },
+  {
+    label: 'About Us',
+    url: ABOUT_LINK,
+  },
+  {
+    label: 'Blog',
+    url: BLOGS_LINK,
+  },
+];
 
 const Footer = () => {
   return (
@@ -77,34 +108,16 @@ const Footer = () => {
                 <Typography variant='subtitle1' mb={1} fontWeight={700}>
                   Quick Links
                 </Typography>
-                <FooterLink
-                  variant='body1'
-                  color='text.secondary'
-                  href={PORTFOLIO_LINK}
-                >
-                  Portfolio
-                </FooterLink>
-                <FooterLink
-                  variant='body1'
-                  color='text.secondary'
-                  href={ABOUT_LINK}
-                >
-                  About Us
-                </FooterLink>
-                <FooterLink
-                  variant='body1'
-                  color='text.secondary'
-                  href={BLOGS_LINK}
-                >
-                  Blog
-                </FooterLink>
-                <FooterLink
-                  variant='body1'
-                  color='text.secondary'
-                  href={CONTACTUS_LINK}
-                >
-                  Contact Us
-                </FooterLink>
+                {navItems.map((el) => (
+                  <FooterLink
+                    key={el.url}
+                    variant='body1'
+                    color='text.secondary'
+                    href={el.url}
+                  >
+                    {el.label}
+                  </FooterLink>
+                ))}
               </Box>
               <Box sx={{ alignItems: 'flex-start' }}>
                 <Typography variant='subtitle1' mb={1} fontWeight={700}>

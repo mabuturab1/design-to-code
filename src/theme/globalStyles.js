@@ -29,6 +29,7 @@ export default function GlobalStyles() {
           backgroundColor: '#fff',
           overflowY: 'auto',
           scrollBehavior: 'smooth',
+          scrollPaddingTop: 50,
           overflowX: 'hidden',
         },
         input: {
