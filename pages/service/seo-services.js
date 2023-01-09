@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Grid, Typography } from '@mui/material';
 import {
   BackColoredCont,
   SectionRoot,
@@ -16,6 +16,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import { SeoServices as SeoServ } from 'components/ourServices/services.data';
 import ServiceHeader from 'components/ourServices/serviceHeader';
+import Consultation from 'components/consulation';
 
 export default function SeoServices() {
   return (
@@ -170,6 +171,8 @@ export default function SeoServices() {
           </FlexForImgCont>
         </SectionRoot>
       </Box>
+
+      <Consultation />
     </React.Fragment>
   );
 }
