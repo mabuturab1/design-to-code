@@ -6,19 +6,19 @@ import { BackIllustration, SectionRoot } from '../custom';
 
 import awsIcon from '@iconify/icons-logos/aws';
 import reactIcon from '@iconify/icons-logos/react';
-import pythonIcon from '@iconify/icons-logos/python';
+import laravelIcon from '@iconify/icons-logos/laravel';
 import javascriptIcon from '@iconify/icons-logos/javascript';
-import vueIcon from '@iconify/icons-logos/vue';
-import javaIcon from '@iconify/icons-logos/java';
+import bitBucket from '@iconify/icons-logos/bitbucket';
+import angularIcon from '@iconify/icons-logos/angular-icon';
+import phpIcon from '@iconify/icons-logos/php';
 import gitIcon from '@iconify/icons-logos/git-icon';
 import firebaseIcon from '@iconify/icons-logos/firebase';
-import atlassianIcon from '@iconify/icons-logos/atlassian';
 import mongodbIcon from '@iconify/icons-logos/mongodb-icon';
-import postgresqlIcon from '@iconify/icons-logos/postgresql';
-import androidIcon from '@iconify/icons-logos/android-icon';
+import postGresIcon from '@iconify/icons-logos/postgresql';
+import jiraIcon from '@iconify/icons-logos/jira';
 import postmanIcon from '@iconify/icons-logos/postman-icon';
-import mariadbIcon from '@iconify/icons-logos/mariadb-icon';
-import swiftIcon from '@iconify/icons-logos/swift';
+import nodejs from '@iconify/icons-logos/nodejs';
+import flutterIcon from '@iconify/icons-logos/flutter';
 import { BackMajorEclipse, TechIonsCont } from './styled';
 
 const avatarSize = { width: 90, height: 90 };
@@ -27,10 +27,7 @@ const getIcon = (icon) => <Icon icon={icon} width='65%' height='65%' />;
 
 const avatarExt = (icon) => {
   return (
-    <Avatar
-      variant='square'
-      sx={{ backgroundColor: '#fff', ...avatarSize, borderRadius: 3 }}
-    >
+    <Avatar variant='square' sx={{ backgroundColor: '#fff', ...avatarSize, borderRadius: 3 }}>
       {getIcon(icon)}
     </Avatar>
   );
@@ -59,23 +56,16 @@ const Technologies = () => {
       className='sectionGap'
       sx={{
         backgroundColor: 'background.neutral',
-        paddingTop: '2rem',
+        paddingTop: '1rem',
         overflow: 'hidden',
-      }}
-    >
+      }}>
       <SectionRoot className='dispFlexColAlgnCen' sx={{ position: 'relative' }}>
         <BackMajorEclipse />
         <Typography variant='h2' gutterBottom align='center'>
           Technologies We Work With
         </Typography>
-        <Typography
-          variant='body1'
-          color='textSecondary'
-          className='sectionMaxWid'
-          sx={{ textAlign: 'center' }}
-        >
-          Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-          emedan semis. Härat rär par.
+        <Typography variant='body1' color='textSecondary' className='sectionMaxWid' sx={{ textAlign: 'center' }}>
+          We leverage following tech tools to craft exceptional user experiences..
         </Typography>
         <TechIonsCont
           whileInView={{ opacity: [0, 1] }}
@@ -83,17 +73,16 @@ const Technologies = () => {
             duration: 1.25,
             ease: 'easeOut',
             delay: 0.25,
-          }}
-        >
-          <AvatarCont>{avatarExt(mariadbIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(androidIcon, postmanIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(awsIcon, reactIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(pythonIcon, javascriptIcon)}</AvatarCont>
-          <AvatarCont>{avatarExt(vueIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(javaIcon, gitIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(firebaseIcon, atlassianIcon)}</AvatarCont>
-          <AvatarCont>{avatars_2(mongodbIcon, postgresqlIcon)}</AvatarCont>
-          <AvatarCont>{avatarExt(swiftIcon)}</AvatarCont>
+          }}>
+          <AvatarCont>{avatarExt(nodejs)}</AvatarCont>
+          <AvatarCont>{avatars_2(mongodbIcon, postGresIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(laravelIcon, angularIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(reactIcon, flutterIcon)}</AvatarCont>
+          <AvatarCont>{avatarExt(javascriptIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(bitBucket, gitIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(awsIcon, firebaseIcon)}</AvatarCont>
+          <AvatarCont>{avatars_2(postmanIcon, jiraIcon)}</AvatarCont>
+          <AvatarCont>{avatarExt(phpIcon)}</AvatarCont>
         </TechIonsCont>
       </SectionRoot>
     </Box>

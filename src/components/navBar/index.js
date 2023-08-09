@@ -51,10 +51,6 @@ const navItems = [
     label: 'About Us',
     url: ABOUT_LINK,
   },
-  {
-    label: 'Blog',
-    url: BLOGS_LINK,
-  },
 ];
 
 function NavBar() {

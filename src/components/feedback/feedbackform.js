@@ -43,7 +43,7 @@ export const Feedbackform = () => {
             <TextField
               name='name'
               value=''
-              placeholder='Your name*'
+              placeholder='Enter your name here...*'
               variant='outlined'
               fullWidth
             />
@@ -55,7 +55,7 @@ export const Feedbackform = () => {
               name='email'
               type='email'
               value=''
-              placeholder='Your Email*'
+              placeholder='Enter your email here...*'
               variant='outlined'
               fullWidth
             />
@@ -66,7 +66,7 @@ export const Feedbackform = () => {
             <TextField
               name='compName'
               value=''
-              placeholder='Your company name*'
+              placeholder='Enter your company name here...*'
               variant='outlined'
               fullWidth
             />
@@ -88,7 +88,7 @@ export const Feedbackform = () => {
             <TextField
               name='message'
               value=''
-              placeholder='Your Message'
+              placeholder='Enter your message here...'
               variant='outlined'
               multiline
               rows={7}
@@ -104,9 +104,9 @@ export const Feedbackform = () => {
             Send Message
           </Button>
         </Grid>
-        <Grid item xs={12} sm={12} sx={{ textAlign: 'center' }}>
+        {/* <Grid item xs={12} sm={12} sx={{ textAlign: 'center' }}>
           <Typography
-            variant='body1'
+            variant='body2'
             color='text.secondary'
             sx={{ maxWidth: 350, marginInline: 'auto' }}
           >
@@ -120,7 +120,7 @@ export const Feedbackform = () => {
             </Link>{' '}
             apply.
           </Typography>
-        </Grid>
+        </Grid> */}
       </GridExt>
     </form>
   );

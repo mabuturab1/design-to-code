@@ -46,7 +46,7 @@ const Testimonials = () => {
             What Customer Say About Us
           </Typography>
           <Typography variant='body1' color='textSecondary' className='sectionMaxWid' align='center'>
-            Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm, emedan semis. Härat rär par.
+            Client Testimonials on Work Ethics and Quality.
           </Typography>
         </Box>
       </SectionRoot>

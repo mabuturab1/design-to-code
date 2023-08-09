@@ -13,31 +13,10 @@ import dribbbleIcon from '@iconify/icons-simple-icons/dribbble';
 import twitterIcon from '@iconify/icons-simple-icons/twitter';
 import facebookIcon from '@iconify/icons-simple-icons/facebook';
 
-import {
-  AvatarExt,
-  CompInfoCont,
-  FooterContainerStyle,
-  FooterLink,
-  FooterRightsSec,
-  FooterRightsSecWrapper,
-  LinkContent,
-  TypoEnd,
-} from './styled';
-import {
-  ABOUT_LINK,
-  BLOGS_LINK,
-  CONTACTUS_LINK,
-  FAQ_LINK,
-  PORTFOLIO_LINK,
-  PRIVACY_POLICY_LINK,
-  TERMS_LINK,
-  COMPANY_LINK,
-  SERVICES_LINK,
-} from '../../utils/links';
+import { AvatarExt, CompInfoCont, FooterContainerStyle, FooterLink, FooterRightsSec, FooterRightsSecWrapper, LinkContent, TypoEnd } from './styled';
+import { ABOUT_LINK, BLOGS_LINK, CONTACTUS_LINK, FAQ_LINK, PORTFOLIO_LINK, PRIVACY_POLICY_LINK, TERMS_LINK, COMPANY_LINK, SERVICES_LINK, Contributors } from '../../utils/links';
 
-const getIcon = (name) => (
-  <Icon icon={name} width={22} height={22} color='#fff' />
-);
+const getIcon = (name) => <Icon icon={name} width={22} height={22} color='#fff' />;
 
 const navItems = [
   {
@@ -68,53 +47,37 @@ const Footer = () => {
       sx={{
         background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
         paddingTop: '2rem',
-      }}
-    >
+      }}>
       <SectionRoot>
         <Box>
           <FooterContainerStyle mb={3}>
             <CompInfoCont sx={{ gap: '1.5rem', flex: 1 }}>
               <Logo sx={{ maxWidth: 200 }} />
               <Typography variant='body1' color='textSecondary'>
-                Lörem ipsum aras beskade nede plakar. Sad monorade. Söven fade
-                negon. Samösat neras pykäs. Preligt anas egoliga. Astrovis låvis
-                revis an.
+              {`Unlock Your Product's Full Potential - Let's Create Together!`}
               </Typography>
               <Box display='flex' gap='1rem'>
                 <Link href='#'>
-                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
-                    {getIcon(facebookIcon)}
-                  </AvatarExt>
+                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>{getIcon(facebookIcon)}</AvatarExt>
                 </Link>
                 <Link href='#'>
-                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
-                    {getIcon(twitterIcon)}
-                  </AvatarExt>
+                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>{getIcon(twitterIcon)}</AvatarExt>
                 </Link>
                 <Link href='#'>
-                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
-                    {getIcon(youtubeIcon)}
-                  </AvatarExt>
+                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>{getIcon(youtubeIcon)}</AvatarExt>
                 </Link>
                 <Link href='#'>
-                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>
-                    {getIcon(dribbbleIcon)}
-                  </AvatarExt>
+                  <AvatarExt sx={{ backgroundColor: 'primary.main' }}>{getIcon(dribbbleIcon)}</AvatarExt>
                 </Link>
               </Box>
             </CompInfoCont>
-            <LinkContent>
+            {/* <LinkContent>
               <Box>
                 <Typography variant='subtitle1' mb={1} fontWeight={700}>
                   Quick Links
                 </Typography>
                 {navItems.map((el) => (
-                  <FooterLink
-                    key={el.url}
-                    variant='body1'
-                    color='text.secondary'
-                    href={el.url}
-                  >
+                  <FooterLink key={el.url} variant='body1' color='text.secondary' href={el.url}>
                     {el.label}
                   </FooterLink>
                 ))}
@@ -129,11 +92,7 @@ const Footer = () => {
                 <FooterLink variant='body1' color='text.secondary' href='#'>
                   How it works
                 </FooterLink>
-                <FooterLink
-                  variant='body1'
-                  color='text.secondary'
-                  href={FAQ_LINK}
-                >
+                <FooterLink variant='body1' color='text.secondary' href={FAQ_LINK}>
                   FAQ
                 </FooterLink>
                 <FooterLink variant='body1' color='text.secondary' href='#'>
@@ -146,7 +105,7 @@ const Footer = () => {
                   Customer Support
                 </FooterLink>
               </Box>
-            </LinkContent>
+            </LinkContent> */}
           </FooterContainerStyle>
           <FooterRightsSecWrapper>
             <FooterRightsSec>
@@ -158,23 +117,16 @@ const Footer = () => {
               </Typography>
             </FooterRightsSec>
             <FooterRightsSec>
-              <FooterLink
-                href={PRIVACY_POLICY_LINK}
-                underline='none'
-                variant='body2'
-                color='inherit'
-              >
+              <FooterLink href={PRIVACY_POLICY_LINK} underline='none' variant='body2' color='inherit'>
                 Privacy Policy
               </FooterLink>
-              <FooterLink
-                href={TERMS_LINK}
-                underline='none'
-                variant='body2'
-                color='inherit'
-              >
+              <FooterLink href={TERMS_LINK} underline='none' variant='body2' color='inherit'>
                 Terms and Conditions
               </FooterLink>
-              <FooterLink
+              <FooterLink target='_blank' href={Contributors} underline='none' variant='body2' color='inherit'>
+                Credits & Contributors
+              </FooterLink>
+              {/* <FooterLink
                 href='#'
                 underline='none'
                 variant='body2'
@@ -189,7 +141,7 @@ const Footer = () => {
                 color='inherit'
               >
                 Language
-              </FooterLink>
+              </FooterLink> */}
             </FooterRightsSec>
           </FooterRightsSecWrapper>
         </Box>

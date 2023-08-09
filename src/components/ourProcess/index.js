@@ -11,7 +11,7 @@ const Process = () => {
       sx={{ position: 'relative' }}
     >
       <Typography variant='h3' gutterBottom>
-        Our Process
+        How we get it done
       </Typography>
       <Typography
         variant='body1'
@@ -19,8 +19,7 @@ const Process = () => {
         className='sectionMaxWid'
         sx={{ textAlign: 'center' }}
       >
-        Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-        emedan semis. Härat rär par.
+       Our seamless product development lifecycle
       </Typography>
       <HorizontalStepper />
     </SectionRoot>

@@ -7,6 +7,7 @@ import {
 } from 'components/custom';
 import Image from 'next/image';
 import React from 'react';
+import { CONTACTUS_LINK } from 'utils/links';
 
 export default function ServiceHeader(props) {
   const { title, description, img } = props;
@@ -20,7 +21,7 @@ export default function ServiceHeader(props) {
             {description}
           </Typography>
           <Box>
-            <Button variant='contained' color='primary' size='large'>
+            <Button variant='contained' color='primary' size='large'  href={CONTACTUS_LINK}>
               Book Free Consultation
             </Button>
           </Box>

@@ -6,9 +6,11 @@ import { motion } from 'framer-motion';
 import WorkCard from './workCard';
 import { BackIllustration, SectionRoot } from '../custom';
 
-import { RecWorkContainer, CardContainer, RootStyle } from './styled';
+import { RecWorkContainer, CardContainer, RootStyle, RowCardContainer, RowCardContainerPortfolioImage } from './styled';
 
 import { ANIMATION_DURATION, getHVAnimationConfigs, Work } from '../../data';
+import NewWorkCard from './NewWorkCard';
+import ImageWorkCard from './ImageWorkCard';
 
 const OurJourney = () => {
   return (
@@ -19,25 +21,21 @@ const OurJourney = () => {
           sx={{
             width: '100vw',
             gap: '4rem',
+            maxWidth: '900px',
           }}>
           <Box className='dispFlexColAlgnCen'>
             <Typography variant='h2' gutterBottom>
-              Our Journey
+              Our Impressive Portfolio
             </Typography>
             <Typography variant='body1' color='textSecondary' className={clsx('sectionMaxWid', 'fullWidth')} align='center' sx={{ width: '100%' }}>
-              Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm, emedan semis. Härat rär par.
+              We are dedicated to creating exceptional user experiences.
             </Typography>
           </Box>
-          <CardContainer {...getHVAnimationConfigs({ y: 60, x: 0, opacity: 0 }, { y: 0, x: 0, opacity: 1 }, { delay: ANIMATION_DURATION.small })}>
+          <RowCardContainer {...getHVAnimationConfigs({ y: 60, x: 0, opacity: 0 }, { y: 0, x: 0, opacity: 1 }, { delay: ANIMATION_DURATION.small })}>
             {Work.slice(0, 3).map((el, i) => (
-              <WorkCard key={`${i}-${el.title}`} {...el} />
+              <NewWorkCard key={`${i}-${el.title}`} {...el} />
             ))}
-          </CardContainer>
-          <motion.div {...getHVAnimationConfigs({ y: -20, x: 0, opacity: 0 }, { y: 0, x: 0, opacity: 1 }, { delay: ANIMATION_DURATION.medium })}>
-            <Button variant='contained' color='primary'>
-              See More Work
-            </Button>
-          </motion.div>
+          </RowCardContainer>
         </SectionRoot>
       </RecWorkContainer>
     </RootStyle>

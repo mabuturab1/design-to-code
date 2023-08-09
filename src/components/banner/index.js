@@ -5,6 +5,7 @@ import { BackLines, BannerContainer, BannerImage, HeaderTextContent } from './st
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ANIMATION_DURATION, getHVAnimationConfigs } from 'data';
+import { CONTACTUS_LINK } from 'utils/links';
 
 const Banner = () => {
   return (
@@ -21,14 +22,14 @@ const Banner = () => {
             With our strong expertise in <strong>Web & Mobile App Development</strong>, you will get a powerful & user-friendly product that delivers superior customer experience. 
             </Typography>
             <motion.div {...getHVAnimationConfigs({ opacity: 0, y: -40 }, { opacity: 1, y: 0 }, { delay: ANIMATION_DURATION.small })}>
-              <Button variant='contained' color='primary' size='large'>
+              <Button variant='contained' color='primary' size='large'  href={CONTACTUS_LINK}>
                 Book free consultation
               </Button>
             </motion.div>
           </HeaderTextContent>
           <BannerImage {...getHVAnimationConfigs({ opacity: 0 }, { opacity: 1 }, { ease: 'easeInOut' })}>
             <Image
-              src='/static/images/bannerImage-1.svg'
+              src='/static/images/rocket-person.svg'
               alt='Banner Img'
               // layout='responsive'
               width={560}

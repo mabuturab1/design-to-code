@@ -1,57 +1,87 @@
 export const Work = [
   {
-    img: '/static/images/workImg.png',
+    img: '/static/images/roadstr_2.png',
     title: 'RoadStr',
     icons: ['/static/images/icon1.svg', '/static/images/icon2.svg'],
+    logo: '/static/images/roadstr_logo.png',
+    question: 'How did we help RoadStr build the ultimate social platform for car enthusiasts?',
+    summary:
+      'RoadStr approached us to develop new features and improve their app performance. We enhanced their social feed, chat, and navigation functions, implementing cutting-edge data processing techniques for better app performance and reliability, resulting in a seamless user experience. Our collaboration with RoadStr continues as we work on adding even more exciting features for their users.',
+    description: [
+      `RoadStr is a social platform for car enthusiasts and petrolheads, enabling them to explore nearby communities, groups, and events for forming friendships and embarking on road drives together. The platform facilitates connections through social feed posts, chat interactions, and participation in local community groups and events.`,
+      `        
+    
+    Right from the beginning, we have played a significant role in enhancing app performance, refining navigation functionality, and introducing novel features to elevate user engagement and drive business growth for RoadStr.`,
+    ],
+  },
+  {
+    img: '/static/images/elevate.png',
+    title: 'Elevate Meal plan',
+    icons: ['/static/images/icon1.svg'],
+    logo: '/static/images/elevate_meal_plan.png',
+    question: 'How did we help Elevate in building the ultimate off-campus meal planning platform for students?',
+    summary:
+      'Conovtech initiated a collaboration with Elevate to develop their restaurant deals section and address critical UI/UX issues. Since then, we have been continuously working with Elevate to enhance the user experience and transform this platform into the top-choice off-campus meal planning platform for all its users.',
+    description: [
+      `
+    Elevate Meal Plan is a meal planning application designed for college students, enabling them to conveniently order cost-effective meals from numerous off-campus restaurants for immediate pickup. 
+    `,
+      `We contributed in addressing significant UI/UX problems and subsequently introduced innovative features, streamlining the signup process, facilitating deal browsing, and enabling users to place multiple meal orders simultaneously`,
+    ],
+  },
+  {
+    img: '/static/images/class_agile.png',
+    title: 'Class Agile',
+    logo: '/static/images/class-agile_logo.svg',
+    icons: ['/static/images/icon1.svg', '/static/images/icon2.svg'],
+    question: 'ClassAgile - Digital Class Room Management System',
+    isWeb: true,
+    summary:
+      'Our engagement with ClassAgile included the development of the polls, quizes, rewards and prizes modules for ClassAgile, which empowers tutors to enhance student engagement within the online learning environment.',
   },
   {
     img: '/static/images/workImg.png',
     title: 'Rockr',
     icons: ['/static/images/icon1.svg'],
+    logo: '/static/images/rockr_logo.png',
   },
   {
     img: '/static/images/workImg.png',
     title: 'Elevate Meal Plan',
     icons: ['/static/images/icon1.svg'],
+    logo: '/static/images/class-agile_logo.svg',
   },
-  {
-    img: '/static/images/workImg.png',
-    title: 'Class Agile',
-    icons: ['/static/images/icon1.svg', '/static/images/icon2.svg'],
-  }
 ];
 
 export const testimonialList = [
   {
-    userImg: '/static/images/user.jpg',
-    username: 'Alex Smith',
+    userImg: '/static/images/stephen.jpeg',
+    username: 'Stephen K',
     rating: 5,
-    message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+    professionalRole: 'Co-Founder & COO at RoadStr',
+    message: `I have had the pleasure of working with Muhammad on our social networking platform at RoadStr for over one year. Muhammad - ConovoTech's Team Lead - is our top full-stack developer.`,
   },
   {
-    userImg: '/static/images/user.jpg',
-    username: 'Silva De Ro',
+    userImg: '/static/images/conrep.png',
+    username: 'Praveen C',
     rating: 5,
-    message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+    professionalRole: 'Conrep Inc',
+    message: `Abu was very talented with lots of patience and flexibility to work with. Even though there were delays on our side, Abu worked with us with very flexible approach to make sure we complete the project as per our needs`,
   },
   {
-    userImg: '/static/images/user.jpg',
-    username: 'John Makho',
+    userImg: '/static/images/johnzhang.jpg',
+    username: 'John Z',
+    professionalRole: 'Class Agile',
     rating: 5,
-    message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+    message: `Abu - ConovoTech's Team Lead - is a full-stack developer you can rely on for your project. He is patient and very detailed. His technical skills are excellent from the front end all the way to the backend. I will definitely hire him again for my next project`,
   },
-  {
-    userImg: '/static/images/user.jpg',
-    username: 'Alex Smith',
-    rating: 5,
-    message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
-  },
-  {
-    userImg: '/static/images/user.jpg',
-    username: 'Silva De Ro',
-    rating: 5,
-    message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
-  },
+  // {
+  //   userImg: '/static/images/user.jpg',
+  //   username: 'Josh Cohen',
+  //   professionalRole: 'Co-founder Elevate Meal Plan',
+  //   rating: 5,
+  //   message: 'Lörem ipsum protism soködade att pseudoligen semick, transcism heteromatisk och heteroska metrogam endotyp. Agnostivision semifiering oaktat reat degåst hatan geov anade, decism.',
+  // },
 ];
 
 export const CardInfo = [
