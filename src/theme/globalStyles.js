@@ -64,7 +64,7 @@ export default function GlobalStyles() {
           textDecoration: 'none',
         },
         '.sectionMaxWid': {
-          maxWidth: '35rem',
+          maxWidth: '37rem',
         },
         '.fullWidth': {
           width: '100%',

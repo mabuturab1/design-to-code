@@ -8,7 +8,7 @@ import { SectionRoot } from '../custom';
 import { sliderSettings } from './carouselSettings';
 import { ArrowStyled, SliderRoot } from './styled';
 
-import { testimonialList } from '../../data';
+import { ANIMATION_DURATION, getHVAnimationConfigs, testimonialList } from '../../data';
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -40,39 +40,21 @@ const Testimonials = () => {
           flexDirection: 'column',
           gap: '3rem',
           position: 'relative',
-        }}
-      >
+        }}>
         <Box className='dispFlexColAlgnCen'>
           <Typography variant='h2' gutterBottom align='center'>
             What Customer Say About Us
           </Typography>
-          <Typography
-            variant='body1'
-            color='textSecondary'
-            className='sectionMaxWid'
-            align='center'
-          >
-            Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-            emedan semis. Härat rär par.
+          <Typography variant='body1' color='textSecondary' className='sectionMaxWid' align='center'>
+            Client Testimonials on Work Ethics and Quality.
           </Typography>
         </Box>
       </SectionRoot>
       <Box width='100%' mt={5}>
-        <SliderRoot
-          {...sliderSettings}
-          prevArrow={<PreviousBtn />}
-          nextArrow={<NextBtn />}
-        >
+        <SliderRoot {...sliderSettings} prevArrow={<PreviousBtn />} nextArrow={<NextBtn />}>
           {testimonialList.map((el, i) => (
             <Box key={`${el.username}-${i + 1}`} sx={{ padding: '10px' }}>
-              <motion.div
-                whileInView={{ y: [30, 0], x: [0, 0], opacity: [0, 1] }}
-                transition={{
-                  duration: 1.25,
-                  ease: 'easeOut',
-                  delay: 0.5,
-                }}
-              >
+              <motion.div {...getHVAnimationConfigs({ opacity: 0, y: 30, x: 0 }, { opacity: 1, y: 0, x: 0 }, { delay: ANIMATION_DURATION.small })}>
                 <TestimonialCard {...el} />
               </motion.div>
             </Box>

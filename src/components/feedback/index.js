@@ -13,8 +13,7 @@ const Feedback = () => {
         </TypographyExt>
       </Box>
       <TypographyExt variant='body1' color='textSecondary'>
-        Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm,
-        emedan semis. Härat rär par.
+        Please complete the form with your inquiry or message
       </TypographyExt>
       <Feedbackform />
     </React.Fragment>

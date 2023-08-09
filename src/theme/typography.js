@@ -1,8 +1,8 @@
 // ----------------------------------------------------------------------
-import { Inter } from '@next/font/google';
+import { Poppins as FontFamily } from '@next/font/google';
 
-export const inter = Inter({
-  weight: ['300', '400', '500', '600', '700'],
+export const font = FontFamily({
+  weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'sans-serif'],
@@ -33,7 +33,7 @@ export function responsiveFontSizes({ sm, md, lg }) {
 // ----------------------------------------------------------------------
 
 const typography = {
-  fontFamily: inter.style.fontFamily,
+  fontFamily: font.style.fontFamily,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
   fontWeightBold: 700,

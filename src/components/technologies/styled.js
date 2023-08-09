@@ -9,7 +9,6 @@ export const TechIonsCont = styled(motion.div)(({ theme }) => ({
   gap: '1.5rem',
   width: '100%',
   marginTop: '4rem',
-  marginBottom: '-5%',
   '& > :nth-of-type(4n+3)': {
     marginTop: '-5%',
     alignItems: 'center',

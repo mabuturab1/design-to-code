@@ -8,6 +8,11 @@ export const Container = styled(Box)(() => ({
   background: `linear-gradient(#F0F5FD,#F2F0FD00)`,
 }));
 
+export const AboutUsContainer = styled(Box)(() => ({
+  width: '100%',
+  height: '100%',
+}));
+
 export const WorkContent = styled(motion.div)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',

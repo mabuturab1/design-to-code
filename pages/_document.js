@@ -3,12 +3,12 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import createEmotionCache from 'createEmotionCache';
 import theme from 'theme';
-import { inter } from 'theme/typography';
+import { font } from 'theme/typography';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang='en' className={inter.className}>
+      <Html lang='en' className={font.className}>
         <Head>
           <meta name='theme-color' content={theme.palette.primary.main} />
           <link rel='shortcut icon' href='/favicon.ico' />

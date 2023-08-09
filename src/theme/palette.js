@@ -22,12 +22,13 @@ const PRIMARY = {
 };
 
 const palette = {
-  common: { black: '#000', white: '#fff' },
+  common: { black: '#000', white: '#fff', darkGray: '#333333' },
   primary: PRIMARY,
   grey: GREY,
   divider: alpha(GREY[500], 0.24),
+  titleHeading: '#000022',
   text: {
-    primary: '#000',
+    primary: '#002',
     secondary: '#343131',
     disabled: GREY[500],
   },

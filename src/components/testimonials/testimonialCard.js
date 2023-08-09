@@ -3,7 +3,7 @@ import React from 'react';
 import { TestimonialCardRoot } from './styled';
 
 const TestimonialCard = (props) => {
-  const { message, userImg, username } = props;
+  const { message, userImg, username, professionalRole } = props;
   return (
     <TestimonialCardRoot className='card'>
       <Box className='cardIntro' display='flex' flexWrap='nowrap' gap={3}>
@@ -11,7 +11,7 @@ const TestimonialCard = (props) => {
         <Box>
           <Typography variant='h5'>{username}</Typography>
           <Typography variant='subtitle2' color='primary.main'>
-            Owner at ABC
+           {professionalRole}
           </Typography>
         </Box>
       </Box>

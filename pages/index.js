@@ -12,18 +12,20 @@ import Consultation from 'components/consulation';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import OurJourney from 'components/ourJourney';
 
 const Home = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>ConovoTech | Landing Page</title>
+        <title>ConovoTech | Web & Mobile App Development Services</title>
       </Head>
       <Banner />
       <Services />
       <Process />
-      <RecentWork />
-      <Clients />
+      <OurJourney />
+      {/* <RecentWork /> */}
+      {/* <Clients /> */}
       <Testimonials />
       <Technologies />
       <Consultation />

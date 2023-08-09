@@ -1,12 +1,4 @@
-import {
-  Box,
-  StepConnector,
-  StepContent,
-  StepLabel,
-  Stepper,
-  styled,
-  Typography,
-} from '@mui/material';
+import { Box, CardMedia, StepConnector, StepContent, StepLabel, Stepper, styled, Typography } from '@mui/material';
 import { TimelineConnector, TimelineDot } from '@mui/lab';
 import { stepConnectorClasses } from '@mui/material/StepConnector';
 
@@ -187,4 +179,16 @@ export const StepLabelExt = styled(StepLabel)(({ theme }) => ({
 
 export const StepperContentExt = styled(StepContent)(({ theme }) => ({
   borderLeft: `3px solid ${theme.palette.primary.main}`,
+}));
+
+export const ProjectDiscoveryImageWrapper = styled(Box)(({ theme }) => ({
+  width: 300,
+  height: 300,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}));
+export const IconImage = styled(CardMedia)(({ theme }) => ({
+  width: 100,
+  height: 100,
 }));

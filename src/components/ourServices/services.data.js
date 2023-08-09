@@ -1,27 +1,23 @@
-import {
-  MAGENTO_SERVICE_LINK,
-  SEO_SERVICE_LINK,
-  WEB_DEV_SERVICE_LINK,
-} from 'utils/links';
+import { MOBILE_DEV_SERVICE_LINK, WEB_DEV_SERVICE_LINK } from 'utils/links';
 
 export const ServiceList = [
   {
-    title: 'Web Design & Development Services',
-    desc: 'Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera i dibäs och anat. Vivyng dissa ',
-    img: '/static/images/web-dev.svg',
+    title: 'Web Development',
+    desc: 'Our expert developers ensure smooth functionality, speed, and reliability, delivering an exceptional user experience',
+    img: '/static/images/mgt-serv.svg',
     link: WEB_DEV_SERVICE_LINK,
   },
   {
-    title: 'Magento Development Services',
-    desc: 'Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera i dibäs och anat. Vivyng dissa ',
-    img: '/static/images/mgt-serv.svg',
-    link: MAGENTO_SERVICE_LINK,
+    title: 'Mobile App Development',
+    desc: 'We create dynamic and user-centric apps that engage your audience and drive valuable results.',
+    img: '/static/images/mobile-app-development.svg',
+    link: MOBILE_DEV_SERVICE_LINK,
   },
   {
-    title: 'Search Engine Optimization',
-    desc: 'Mivinde bes, nynde prosat geober geotiligt. Proktigt ribev potrena. Prokror speprehet. Jåtegon kolåbång. Vasoskapet kror bera i dibäs och anat. Vivyng dissa ',
-    img: '/static/images/research.svg',
-    link: SEO_SERVICE_LINK,
+    title: 'UI/UX Design',
+    desc: 'We craft intuitive interfaces that prioritize user needs, ensuring a seamless and enjoyable experience for your audience',
+    img: '/static/images/web-dev.svg',
+    link: WEB_DEV_SERVICE_LINK,
   },
 ];
 
@@ -103,14 +99,7 @@ export const WebDevServices = [
   },
 ];
 
-export const WebDevPojApproach = [
-  'Requirements Analysis',
-  'Wireframing & Designing',
-  'Development',
-  'Testing',
-  'Deployment',
-  'Maintenance',
-];
+export const WebDevPojApproach = ['Requirements Analysis', 'Wireframing & Designing', 'Development', 'Testing', 'Deployment', 'Maintenance'];
 
 export const WebDevProcess = [
   {
