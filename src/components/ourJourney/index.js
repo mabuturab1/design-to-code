@@ -10,7 +10,7 @@ import { RecWorkContainer, CardContainer, RootStyle } from './styled';
 
 import { ANIMATION_DURATION, getHVAnimationConfigs, Work } from '../../data';
 
-const RecentWork = () => {
+const OurJourney = () => {
   return (
     <RootStyle id='portfolio' className='sectionGap'>
       <RecWorkContainer pt={5}>
@@ -22,7 +22,7 @@ const RecentWork = () => {
           }}>
           <Box className='dispFlexColAlgnCen'>
             <Typography variant='h2' gutterBottom>
-              Recent Work
+              Our Journey
             </Typography>
             <Typography variant='body1' color='textSecondary' className={clsx('sectionMaxWid', 'fullWidth')} align='center' sx={{ width: '100%' }}>
               Lörem ipsum georening buköska vaben. Dögyns eurong. Povisovis josm, emedan semis. Härat rär par.
@@ -44,4 +44,4 @@ const RecentWork = () => {
   );
 };
 
-export default RecentWork;
+export default OurJourney;

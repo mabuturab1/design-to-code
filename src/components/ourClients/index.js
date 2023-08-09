@@ -2,6 +2,7 @@ import { Avatar, styled } from '@mui/material';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionRoot } from '../custom';
+import { ANIMATION_DURATION, getHVAnimationConfigs } from 'data';
 
 const RootStyle = styled('div')(() => ({
   paddingBlock: '1rem',
@@ -18,91 +19,20 @@ const Container = styled('div')(() => ({
   alignItems: 'center',
 }));
 
+const CLIENT_DATA = ['/static/images/comp_logo_1.svg', '/static/images/comp_logo_2.svg', '/static/images/comp_logo_3.svg', '/static/images/comp_logo_4.svg', '/static/images/comp_logo_5.svg'];
+
 const Clients = () => {
   return (
     <RootStyle>
       <SectionRoot className='sectionGap' sx={{ marginBottom: '0' }}>
         <Container>
-          <motion.div
-            className='logoBox'
-            whileInView={{ opacity: [0, 1] }}
-            transition={{
-              duration: 1.25,
-              ease: 'easeOut',
-              delay: 0.25,
-            }}
-          >
-            <Avatar
-              variant='square'
-              src='/static/images/comp_logo_1.svg'
-              alt='Client'
-              sx={{ width: '100%', height: '100%', maxWidth: 125 }}
-            />
-          </motion.div>
-          <motion.div
-            className='logoBox'
-            whileInView={{ opacity: [0, 1] }}
-            transition={{
-              duration: 1.25,
-              ease: 'easeOut',
-              delay: 0.5,
-            }}
-          >
-            <Avatar
-              variant='square'
-              src='/static/images/comp_logo_2.svg'
-              alt='Client'
-              sx={{ width: '100%', height: '100%', maxWidth: 125 }}
-            />
-          </motion.div>
-          <motion.div
-            className='logoBox'
-            whileInView={{ opacity: [0, 1] }}
-            transition={{
-              duration: 1.25,
-              ease: 'easeOut',
-              delay: 0.75,
-            }}
-          >
-            <Avatar
-              variant='square'
-              src='/static/images/comp_logo_3.svg'
-              alt='Client'
-              sx={{ width: '100%', height: '100%', maxWidth: 125 }}
-            />
-          </motion.div>
-          <motion.div
-            className='logoBox'
-            whileInView={{ opacity: [0, 1] }}
-            transition={{
-              duration: 1.25,
-              ease: 'easeOut',
-              delay: 1,
-            }}
-          >
-            <Avatar
-              variant='square'
-              src='/static/images/comp_logo_4.svg'
-              alt='Client'
-              sx={{ width: '100%', height: '100%', maxWidth: 125 }}
-            />
-          </motion.div>
-          <motion.div
-            className='logoBox'
-            whileInView={{ opacity: [0, 1] }}
-            transition={{
-              duration: 1.25,
-              ease: 'easeOut',
-              delay: 1.25,
-            }}
-          >
-            <Avatar
-              variant='square'
-              src='/static/images/comp_logo_5.svg'
-              alt='Client'
-              sx={{ width: '100%', height: '100%', maxWidth: 125 }}
-            />
-          </motion.div>
+          {CLIENT_DATA.map((_d, index) => (
+            <motion.div
+              key={index}
+              {...getHVAnimationConfigs({ opacity: 0 }, { opacity: 1 }, { duration: ANIMATION_DURATION.small, delay: ANIMATION_DURATION.small + index * ANIMATION_DURATION.small })}>
+              <Avatar variant='square' src={_d} alt='Client' sx={{ width: '100%', height: '100%', maxWidth: 125 }} />
+            </motion.div>
+          ))}
         </Container>
       </SectionRoot>
     </RootStyle>

@@ -10,5 +10,5 @@ export const PRIVACY_POLICY_LINK = '/privacy';
 export const TERMS_LINK = '/terms';
 
 export const WEB_DEV_SERVICE_LINK = '/service/web-development';
-export const MAGENTO_SERVICE_LINK = '/service/magento-development';
-export const SEO_SERVICE_LINK = '/service/seo-services';
+export const MOBILE_DEV_SERVICE_LINK = '/service/magento-development';
+export const UI_UX_LINK = '/service/seo-services';
